@@ -1,0 +1,83 @@
+# depslib dependency file v1.0
+1493078892 source:/home/rayechell/TEACHING/cs250/cs-250-private-files/Homework Projects 2017-01/Binary Search Tree/program_main.cpp
+	"EmployeeManager.hpp"
+
+1493080865 /home/rayechell/TEACHING/cs250/cs-250-private-files/Homework Projects 2017-01/Binary Search Tree/BinarySearchTree.hpp
+	<iostream>
+	<string>
+	<sstream>
+
+1493078661 /home/rayechell/TEACHING/cs250/cs-250-private-files/Homework Projects 2017-01/Binary Search Tree/Employee.hpp
+	<string>
+	<iostream>
+
+1493085033 source:/home/rayechell/TEACHING/cs250/cs-250-private-files/Homework Projects 2017-01/Binary Search Tree/EmployeeManager.cpp
+	"EmployeeManager.hpp"
+	"Timer.hpp"
+	<fstream>
+
+1493081234 /home/rayechell/TEACHING/cs250/cs-250-private-files/Homework Projects 2017-01/Binary Search Tree/EmployeeManager.hpp
+	"Employee.hpp"
+	"BinarySearchTree.hpp"
+	<vector>
+
+1493079846 /home/rayechell/TEACHING/cs250/cs-250-private-files/Homework Projects 2017-01/Binary Search Tree/Timer.hpp
+	<chrono>
+
+1493079893 source:/home/rayechell/TEACHING/cs250/cs-250-private-files/Homework Projects 2017-01/Binary Search Tree/Timer.cpp
+	"Timer.hpp"
+	<iostream>
+
+1493078892 source:/home/rayechell/TEACHING/cs250/cs-250-private-files/Projects 2017-08/Project 3 - Binary Search Trees/Project 3 - Binary Search Trees/program_main.cpp
+	"EmployeeManager.hpp"
+
+1493086844 /home/rayechell/TEACHING/cs250/cs-250-private-files/Projects 2017-08/Project 3 - Binary Search Trees/Project 3 - Binary Search Trees/EmployeeManager.hpp
+	"Employee.hpp"
+	"BinarySearchTree.hpp"
+	<vector>
+
+1493078661 /home/rayechell/TEACHING/cs250/cs-250-private-files/Projects 2017-08/Project 3 - Binary Search Trees/Project 3 - Binary Search Trees/Employee.hpp
+	<string>
+	<iostream>
+
+1493088114 /home/rayechell/TEACHING/cs250/cs-250-private-files/Projects 2017-08/Project 3 - Binary Search Trees/Project 3 - Binary Search Trees/BinarySearchTree.hpp
+	<iostream>
+	<string>
+	<sstream>
+
+1493079893 source:/home/rayechell/TEACHING/cs250/cs-250-private-files/Projects 2017-08/Project 3 - Binary Search Trees/Project 3 - Binary Search Trees/Timer.cpp
+	"Timer.hpp"
+	<iostream>
+
+1493079846 /home/rayechell/TEACHING/cs250/cs-250-private-files/Projects 2017-08/Project 3 - Binary Search Trees/Project 3 - Binary Search Trees/Timer.hpp
+	<chrono>
+
+1493086822 source:n:\school\2017 fall\project 3 - binary search trees\employeemanager.cpp
+	"EmployeeManager.hpp"
+	"Timer.hpp"
+	<fstream>
+
+1493086844 n:\school\2017 fall\project 3 - binary search trees\employeemanager.hpp
+	"Employee.hpp"
+	"BinarySearchTree.hpp"
+	<vector>
+
+1493078660 n:\school\2017 fall\project 3 - binary search trees\employee.hpp
+	<string>
+	<iostream>
+
+1512205610 n:\school\2017 fall\project 3 - binary search trees\binarysearchtree.hpp
+	<iostream>
+	<string>
+	<sstream>
+
+1493079846 n:\school\2017 fall\project 3 - binary search trees\timer.hpp
+	<chrono>
+
+1493078892 source:n:\school\2017 fall\project 3 - binary search trees\program_main.cpp
+	"EmployeeManager.hpp"
+
+1493079892 source:n:\school\2017 fall\project 3 - binary search trees\timer.cpp
+	"Timer.hpp"
+	<iostream>
+

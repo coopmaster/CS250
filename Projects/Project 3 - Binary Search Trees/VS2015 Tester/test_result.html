@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> cuTEST Test Results </title>
+        <style type='text/css'>
+            body { font-family: monospace; font-size: 1.5em; }
+            .warning { background: ffed24#; font-size: 20px; text-align: center; }
+            .result-success { background: #24ff24; font-size: 20px; text-align: center; }
+            .result-failure { background: #ff7095; font-size: 20px; text-align: center; }
+            table { width: 100%; border: solid 1px #aaaaaa; }
+            table tr.pass { background: #ccffcc; }
+            table tr.fail { background: #ffcccc; }
+            table tr.summary { background: #000000; color: #ffffff; }
+            table tr.descriptions { font-size: 8pt; text-align: center; }
+            table .col_set      { width: 10%; }
+            table .col_test     { width: 20%; }
+            table .col_prereq   { width: 10%; }
+            table .col_result   { width: 5%; }
+            table .col_expected { width: 20%; }
+            table .col_actual   { width: 20%; }
+            table .col_comments { width: 15%; }
+            table .spacer { height: 100px; }
+        </style>
+    </head>
+    <body>
+    <div class='warning'>Warning: Make sure to check if all tests finish (there will be a message at the end of the file) - <br>
+    It is possible for your program to crash early, but still show that tests have passed because it hasn't gone through everything.</div>
+    <table>
+        <tr>
+            <th class='col_set'> Test set </th>
+            <th class='col_test'> Test </th>
+            <th class='col_prereq'> Prerequisite functions </th>
+            <th class='col_result'> Pass/fail </th>
+            <th class='col_expected'> Expected output </th>
+            <th class='col_actual'> Actual output </th>
+            <th class='col_comments'> Comments </th>
+        </tr>
+        <tr class='descriptions'>
+            <td>  </td>
+            <td>  </td>
+            <td> Functions that need to be implemented for these tests to work right </td>
+            <td>  </td>
+            <td> The output expected from the function's return </td>
+            <td> What was actually returned from the function </td>
+            <td> Additional notes from the test </td>
+        </tr>
+<tr class='fail'>
+<td class='test-set'> Test_Insert </td>
+<td class='test'> Insert one item, it should become the root. </td>
+<td class='prereq'> Insert </td>
+<td class='result'> failed </td>
+<td class='expected'> Root item address = 1<br> </td>
+<td class='actual'> Root item address = 00000000<br> </td>
+<td class='comments'>  </td>
+</tr>
+<tr class='fail'>
+<td colspan='7'>TEST STOPPED - SEGFAULT RISK</td>
+</tr>
+<tr class='summary'>
+<td colspan='7' class='summary'>
+<strong>SUMMARY FOR Test_Insert:</strong>
+0 out of 1 tests passed
+</td>
+</tr>
+<tr class='spacer'></tr>
+<tr class='fail'>
+<td class='test-set'> Test_Contains </td>
+<td class='test'> Tree size 1, item contained in list returns true </td>
+<td class='prereq'> Insert, Contains </td>
+<td class='result'> failed </td>
+<td class='expected'> found = 1<br> </td>
+<td class='actual'> found = 0<br> </td>
+<td class='comments'>  </td>
+</tr>
+<tr class='fail'>
+<td class='test-set'> Test_Contains </td>
+<td class='test'> Tree size 4, item contained in list returns true </td>
+<td class='prereq'> Insert, Contains </td>
+<td class='result'> failed </td>
+<td class='expected'> found = 1<br> </td>
+<td class='actual'> found = 0<br> </td>
+<td class='comments'>  </td>
+</tr>
+<tr class='pass'>
+<td class='test-set'> Test_Contains </td>
+<td class='test'> Tree size 1, item NOT contained in list returns false </td>
+<td class='prereq'> Insert, Contains </td>
+<td class='result'> passed </td>
+<td class='expected'> found = 0<br> </td>
+<td class='actual'> found = 0<br> </td>
+<td class='comments'>  </td>
+</tr>
+<tr class='pass'>
+<td class='test-set'> Test_Contains </td>
+<td class='test'> Tree size 4, item NOT contained in list returns false </td>
+<td class='prereq'> Insert, Contains </td>
+<td class='result'> passed </td>
+<td class='expected'> found = 0<br> </td>
+<td class='actual'> found = 0<br> </td>
+<td class='comments'>  </td>
+</tr>
+<tr class='summary'>
+<td colspan='7' class='summary'>
+<strong>SUMMARY FOR Test_Contains:</strong>
+2 out of 4 tests passed
+</td>
+</tr>
+<tr class='spacer'></tr>
+<tr class='fail'>
+<td class='test-set'> Test_FindNode </td>
+<td class='test'> Tree size 1, find item in tree, return not null </td>
+<td class='prereq'> Insert, FindNode </td>
+<td class='result'> failed </td>
+<td class='expected'> found item = not null<br> </td>
+<td class='actual'> found item = null<br> </td>
+<td class='comments'>  </td>
+</tr>
+<tr class='fail'>
+<td colspan='7'>TEST STOPPED - SEGFAULT RISK</td>
+</tr>
+<tr class='summary'>
+<td colspan='7' class='summary'>
+<strong>SUMMARY FOR Test_FindNode:</strong>
+0 out of 1 tests passed
+</td>
+</tr>
+<tr class='spacer'></tr>
+<tr class='pass'>
+<td class='test-set'> Test_FindParentOfNode </td>
+<td class='test'> Try to find parent of root; return null </td>
+<td class='prereq'> Insert, FindParentOfNode </td>
+<td class='result'> passed </td>
+<td class='expected'> parent = null<br> </td>
+<td class='actual'> parent = null<br> </td>
+<td class='comments'>  </td>
+</tr>
+<tr class='fail'>
+<td class='test-set'> Test_FindParentOfNode </td>
+<td class='test'> Try to find parent of non-root; return parent is not null </td>
+<td class='prereq'> Insert, FindParentOfNode </td>
+<td class='result'> failed </td>
+<td class='expected'> parent = not null<br> </td>
+<td class='actual'> parent = null<br> </td>
+<td class='comments'>  </td>
+</tr>
+<tr class='fail'>
+<td colspan='7'>TEST STOPPED - SEGFAULT RISK</td>
+</tr>
+<tr class='summary'>
+<td colspan='7' class='summary'>
+<strong>SUMMARY FOR Test_FindParentOfNode:</strong>
+1 out of 2 tests passed
+</td>
+</tr>
+<tr class='spacer'></tr>
+<tr class='fail'>
+<td class='test-set'> Test_Delete </td>
+<td class='test'> Insert item and make sure root is not null </td>
+<td class='prereq'> Insert, Delete </td>
+<td class='result'> failed </td>
+<td class='expected'> m_ptrRoot = not null<br> </td>
+<td class='actual'> m_ptrRoot = null<br> </td>
+<td class='comments'>  </td>
+</tr>
+<tr class='fail'>
+<td colspan='7'>TEST STOPPED - SEGFAULT RISK</td>
+</tr>
+<tr class='summary'>
+<td colspan='7' class='summary'>
+<strong>SUMMARY FOR Test_Delete:</strong>
+0 out of 1 tests passed
+</td>
+</tr>
+<tr class='spacer'></tr>
+<tr class='fail'>
+<td class='test-set'> Test_GetInOrder </td>
+<td class='test'> Tree F-B-G-A-D-I-H-C-E, get in-order </td>
+<td class='prereq'> Insert, GetInOrder </td>
+<td class='result'> failed </td>
+<td class='expected'> output = A B C D E F G H I <br> </td>
+<td class='actual'> output = <br> </td>
+<td class='comments'>  </td>
+</tr>
+<tr class='summary'>
+<td colspan='7' class='summary'>
+<strong>SUMMARY FOR Test_GetInOrder:</strong>
+0 out of 1 tests passed
+</td>
+</tr>
+<tr class='spacer'></tr>
+<tr class='fail'>
+<td class='test-set'> Test_GetPreOrder </td>
+<td class='test'> Tree F-B-G-A-D-I-H-C-E, get pre-order </td>
+<td class='prereq'> Insert, GetPreOrder </td>
+<td class='result'> failed </td>
+<td class='expected'> output = F B A D C E G I H <br> </td>
+<td class='actual'> output = <br> </td>
+<td class='comments'>  </td>
+</tr>
+<tr class='summary'>
+<td colspan='7' class='summary'>
+<strong>SUMMARY FOR Test_GetPreOrder:</strong>
+0 out of 1 tests passed
+</td>
+</tr>
+<tr class='spacer'></tr>
+<tr class='fail'>
+<td class='test-set'> Test_GetPostOrder </td>
+<td class='test'> Tree F-B-G-A-D-I-H-C-E, get pre-order </td>
+<td class='prereq'> Insert, GetPostOrder </td>
+<td class='result'> failed </td>
+<td class='expected'> output = A C E D B H I G F <br> </td>
+<td class='actual'> output = <br> </td>
+<td class='comments'>  </td>
+</tr>
+<tr class='summary'>
+<td colspan='7' class='summary'>
+<strong>SUMMARY FOR Test_GetPostOrder:</strong>
+0 out of 1 tests passed
+</td>
+</tr>
+<tr class='spacer'></tr>
+<tr class='fail'>
+<td class='test-set'> Test_GetMax </td>
+<td class='test'> Test tree size 1 for max, make sure not null </td>
+<td class='prereq'> Insert, GetMax </td>
+<td class='result'> failed </td>
+<td class='expected'> max = 66<br> </td>
+<td class='actual'> max = null<br> </td>
+<td class='comments'>  </td>
+</tr>
+<tr class='fail'>
+<td colspan='7'>TEST STOPPED - SEGFAULT RISK</td>
+</tr>
+<tr class='summary'>
+<td colspan='7' class='summary'>
+<strong>SUMMARY FOR Test_GetMax:</strong>
+0 out of 1 tests passed
+</td>
+</tr>
+<tr class='spacer'></tr>
+<tr class='pass'>
+<td class='test-set'> Test_GetCount </td>
+<td class='test'> Check count for tree size 0 </td>
+<td class='prereq'> Insert, GetCount </td>
+<td class='result'> passed </td>
+<td class='expected'> count = 0<br> </td>
+<td class='actual'> count = 0<br> </td>
+<td class='comments'>  </td>
+</tr>
+<tr class='fail'>
+<td class='test-set'> Test_GetCount </td>
+<td class='test'> Check count for tree size 5 </td>
+<td class='prereq'> Insert, GetCount </td>
+<td class='result'> failed </td>
+<td class='expected'> count = 5<br> </td>
+<td class='actual'> count = 0<br> </td>
+<td class='comments'>  </td>
+</tr>
+<tr class='summary'>
+<td colspan='7' class='summary'>
+<strong>SUMMARY FOR Test_GetCount:</strong>
+1 out of 2 tests passed
+</td>
+</tr>
+<tr class='spacer'></tr>
+<tr class='pass'>
+<td class='test-set'> Test_GetHeight </td>
+<td class='test'> Check height for empty tree </td>
+<td class='prereq'> Insert, GetHeight </td>
+<td class='result'> passed </td>
+<td class='expected'> height = 0<br> </td>
+<td class='actual'> height = 0<br> </td>
+<td class='comments'>  </td>
+</tr>
+<tr class='fail'>
+<td class='test-set'> Test_GetHeight </td>
+<td class='test'> Check height for tree with one level </td>
+<td class='prereq'> Insert, GetHeight </td>
+<td class='result'> failed </td>
+<td class='expected'> height = 1<br> </td>
+<td class='actual'> height = 0<br> </td>
+<td class='comments'>  </td>
+</tr>
+<tr class='fail'>
+<td class='test-set'> Test_GetHeight </td>
+<td class='test'> Check height for tree with two levels </td>
+<td class='prereq'> Insert, GetHeight </td>
+<td class='result'> failed </td>
+<td class='expected'> height = 2<br> </td>
+<td class='actual'> height = 0<br> </td>
+<td class='comments'>  </td>
+</tr>
+<tr class='fail'>
+<td class='test-set'> Test_GetHeight </td>
+<td class='test'> Check height for tree with three levels </td>
+<td class='prereq'> Insert, GetHeight </td>
+<td class='result'> failed </td>
+<td class='expected'> height = 3<br> </td>
+<td class='actual'> height = 0<br> </td>
+<td class='comments'>  </td>
+</tr>
+<tr class='summary'>
+<td colspan='7' class='summary'>
+<strong>SUMMARY FOR Test_GetHeight:</strong>
+1 out of 4 tests passed
+</td>
+</tr>
+<tr class='spacer'></tr>
+    </table>
+    <div class='result-failure '>11 testsets ran; 0 testsets passed</div>
+    </body>
+</html>

@@ -1,0 +1,172 @@
+# depslib dependency file v1.0
+1493070350 source:/home/rayechell/TEACHING/cs250/cs-250-private-files/Homework Projects 2017-01/Binary Search Tree/cuTEST/TesterBase.cpp
+	"TesterBase.hpp"
+	"Menu.hpp"
+	"StringUtil.hpp"
+
+1493067454 /home/rayechell/TEACHING/cs250/cs-250-private-files/Homework Projects 2017-01/Binary Search Tree/cuTEST/TesterBase.hpp
+	<string>
+	<list>
+	<vector>
+	<functional>
+	<fstream>
+
+1493067454 /home/rayechell/TEACHING/cs250/cs-250-private-files/Homework Projects 2017-01/Binary Search Tree/cuTEST/Menu.hpp
+	<iostream>
+	<vector>
+	<string>
+	<limits>
+	<cstdlib>
+	<fstream>
+
+1492628279 source:/home/rayechell/TEACHING/cs250/cs-250-private-files/Homework Projects 2017-01/Binary Search Tree/main.cpp
+	"BinarySearchTree.hpp"
+	"Tester.hpp"
+
+1493077644 /home/rayechell/TEACHING/cs250/cs-250-private-files/Homework Projects 2017-01/Binary Search Tree/BinarySearchTree.hpp
+	<iostream>
+	<string>
+	<sstream>
+
+1493077884 /home/rayechell/TEACHING/cs250/cs-250-private-files/Homework Projects 2017-01/Binary Search Tree/Tester.hpp
+	<iostream>
+	<string>
+	"cuTEST/TesterBase.hpp"
+	"cuTEST/Menu.hpp"
+	"cuTEST/StringUtil.hpp"
+	"BinarySearchTree.hpp"
+
+1492630594 /home/rayechell/TEACHING/cs250/cs-250-private-files/Homework Projects 2017-01/Binary Search Tree/cuTEST/StringUtil.hpp
+	<string>
+	<sstream>
+
+1492628279 source:/home/rayechell/TEACHING/cs250/cs-250-private-files/Homework Projects 2017-01/Binary Search Tree/test_main.cpp
+	"BinarySearchTree.hpp"
+	"Tester.hpp"
+
+1492628279 source:/home/rayechell/TEACHING/cs250/cs-250-private-files/Projects 2017-08/Project 3 - Binary Search Trees/Project 3 - Binary Search Trees/test_main.cpp
+	"BinarySearchTree.hpp"
+	"Tester.hpp"
+
+1493088114 /home/rayechell/TEACHING/cs250/cs-250-private-files/Projects 2017-08/Project 3 - Binary Search Trees/Project 3 - Binary Search Trees/BinarySearchTree.hpp
+	<iostream>
+	<string>
+	<sstream>
+
+1510426868 /home/rayechell/TEACHING/cs250/cs-250-private-files/Projects 2017-08/Project 3 - Binary Search Trees/Project 3 - Binary Search Trees/Tester.hpp
+	<iostream>
+	<string>
+	"cuTEST/TesterBase.hpp"
+	"cuTEST/Menu.hpp"
+	"cuTEST/StringUtil.hpp"
+	"BinarySearchTree.hpp"
+
+1510426311 /home/rayechell/TEACHING/cs250/cs-250-private-files/Projects 2017-08/Project 3 - Binary Search Trees/Project 3 - Binary Search Trees/cuTEST/TesterBase.hpp
+	<string>
+	<list>
+	<vector>
+	<functional>
+	<fstream>
+
+1505176996 /home/rayechell/TEACHING/cs250/cs-250-private-files/Projects 2017-08/Project 3 - Binary Search Trees/Project 3 - Binary Search Trees/cuTEST/Menu.hpp
+	<iostream>
+	<vector>
+	<string>
+	<limits>
+	<cstdlib>
+	<fstream>
+
+1505176996 /home/rayechell/TEACHING/cs250/cs-250-private-files/Projects 2017-08/Project 3 - Binary Search Trees/Project 3 - Binary Search Trees/cuTEST/StringUtil.hpp
+	<string>
+	<sstream>
+
+1510426417 source:/home/rayechell/TEACHING/cs250/cs-250-private-files/Projects 2017-08/Project 3 - Binary Search Trees/Project 3 - Binary Search Trees/cuTEST/TesterBase.cpp
+	"TesterBase.hpp"
+	"Menu.hpp"
+	"StringUtil.hpp"
+	<iomanip>
+
+1510426417 source:/home/rayechell/TEACHING/cs250/CS250-Data-Structures/Assignments/Projects/starter files/Project 3 - Binary Search Trees/cuTEST/TesterBase.cpp
+	"TesterBase.hpp"
+	"Menu.hpp"
+	"StringUtil.hpp"
+	<iomanip>
+
+1510426311 /home/rayechell/TEACHING/cs250/CS250-Data-Structures/Assignments/Projects/starter files/Project 3 - Binary Search Trees/cuTEST/TesterBase.hpp
+	<string>
+	<list>
+	<vector>
+	<functional>
+	<fstream>
+
+1505176996 /home/rayechell/TEACHING/cs250/CS250-Data-Structures/Assignments/Projects/starter files/Project 3 - Binary Search Trees/cuTEST/Menu.hpp
+	<iostream>
+	<vector>
+	<string>
+	<limits>
+	<cstdlib>
+	<fstream>
+
+1505176996 /home/rayechell/TEACHING/cs250/CS250-Data-Structures/Assignments/Projects/starter files/Project 3 - Binary Search Trees/cuTEST/StringUtil.hpp
+	<string>
+	<sstream>
+
+1492628279 source:/home/rayechell/TEACHING/cs250/CS250-Data-Structures/Assignments/Projects/starter files/Project 3 - Binary Search Trees/test_main.cpp
+	"BinarySearchTree.hpp"
+	"Tester.hpp"
+
+1493088114 /home/rayechell/TEACHING/cs250/CS250-Data-Structures/Assignments/Projects/starter files/Project 3 - Binary Search Trees/BinarySearchTree.hpp
+	<iostream>
+	<string>
+	<sstream>
+
+1511024600 /home/rayechell/TEACHING/cs250/CS250-Data-Structures/Assignments/Projects/starter files/Project 3 - Binary Search Trees/Tester.hpp
+	<iostream>
+	<string>
+	"cuTEST/TesterBase.hpp"
+	"cuTEST/Menu.hpp"
+	"cuTEST/StringUtil.hpp"
+	"BinarySearchTree.hpp"
+
+1510426416 source:n:\school\2017 fall\project 3 - binary search trees\cutest\testerbase.cpp
+	"TesterBase.hpp"
+	"Menu.hpp"
+	"StringUtil.hpp"
+	<iomanip>
+
+1510426310 n:\school\2017 fall\project 3 - binary search trees\cutest\testerbase.hpp
+	<string>
+	<list>
+	<vector>
+	<functional>
+	<fstream>
+
+1505176996 n:\school\2017 fall\project 3 - binary search trees\cutest\menu.hpp
+	<iostream>
+	<vector>
+	<string>
+	<limits>
+	<cstdlib>
+	<fstream>
+
+1505176996 n:\school\2017 fall\project 3 - binary search trees\cutest\stringutil.hpp
+	<string>
+	<sstream>
+
+1492628278 source:n:\school\2017 fall\project 3 - binary search trees\test_main.cpp
+	"BinarySearchTree.hpp"
+	"Tester.hpp"
+
+1512205530 n:\school\2017 fall\project 3 - binary search trees\binarysearchtree.hpp
+	<iostream>
+	<string>
+	<sstream>
+
+1511024600 n:\school\2017 fall\project 3 - binary search trees\tester.hpp
+	<iostream>
+	<string>
+	"cuTEST/TesterBase.hpp"
+	"cuTEST/Menu.hpp"
+	"cuTEST/StringUtil.hpp"
+	"BinarySearchTree.hpp"
+

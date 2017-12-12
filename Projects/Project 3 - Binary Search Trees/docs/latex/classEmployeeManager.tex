@@ -1,0 +1,267 @@
+\hypertarget{classEmployeeManager}{}\section{Employee\+Manager Class Reference}
+\label{classEmployeeManager}\index{Employee\+Manager@{Employee\+Manager}}
+
+
+Small program that stores a list of employees, as well as searchable trees.  
+
+
+
+
+{\ttfamily \#include $<$Employee\+Manager.\+hpp$>$}
+
+
+
+Collaboration diagram for Employee\+Manager\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classEmployeeManager_aaa4729386d489d0f263b6fd4b406ad5f}{Employee\+Manager} ()
+\item 
+void \hyperlink{classEmployeeManager_a01e5b7d43448c1e9f8d2d1f4f1fc537b}{Search\+By\+Id} ()
+\begin{DoxyCompactList}\small\item\em Does a search for an employee by id using linear search and the binary search tree, compares result times. \end{DoxyCompactList}\item 
+void \hyperlink{classEmployeeManager_a5d0bf6fe40143665f043cba70c0e9654}{Search\+By\+Name} ()
+\begin{DoxyCompactList}\small\item\em Does a search for an employee by name using linear search and the binary search tree, compares result times. \end{DoxyCompactList}\item 
+void \hyperlink{classEmployeeManager_a33fffec39403a45d3e993bacdeb3582b}{Search\+By\+Email} ()
+\begin{DoxyCompactList}\small\item\em Does a search for an employee by email address using linear search and the binary search tree, compares result times. \end{DoxyCompactList}\item 
+void \hyperlink{classEmployeeManager_a92e2e329960381bd3ff14f48c76fc7db}{Main\+Menu} ()
+\begin{DoxyCompactList}\small\item\em Allows user to select whether to search by ID, name, or email address. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classEmployeeManager_a799fffb1b9cf55d22192f518523b90bb}{Load\+Employees} ()
+\begin{DoxyCompactList}\small\item\em Loads the list of employees from the text file. \end{DoxyCompactList}\item 
+\hyperlink{structEmployee}{Employee} $\ast$ \hyperlink{classEmployeeManager_a4bf226cae634590b42ae7daf26ae7a5a}{Search\+By\+Id\+\_\+\+Tree} (int index)
+\begin{DoxyCompactList}\small\item\em Tries to locate employee by id using the tree index. \end{DoxyCompactList}\item 
+\hyperlink{structEmployee}{Employee} $\ast$ \hyperlink{classEmployeeManager_a462f98c10a16addf9656f1e59ae109ed}{Search\+By\+Name\+\_\+\+Tree} (string name)
+\begin{DoxyCompactList}\small\item\em Tries to locate employee by name using the tree index. \end{DoxyCompactList}\item 
+\hyperlink{structEmployee}{Employee} $\ast$ \hyperlink{classEmployeeManager_aa35d0748e3b7a34f40f24e5b7ae4ad53}{Search\+By\+Email\+\_\+\+Tree} (string email)
+\begin{DoxyCompactList}\small\item\em Tries to locate employee by email address using the tree index. \end{DoxyCompactList}\item 
+\hyperlink{structEmployee}{Employee} $\ast$ \hyperlink{classEmployeeManager_af2d57cf6bc77893edfef2a1403c993c9}{Search\+By\+Id\+\_\+\+Linear} (int index)
+\begin{DoxyCompactList}\small\item\em Tries to locate employee by id using a linear search. \end{DoxyCompactList}\item 
+\hyperlink{structEmployee}{Employee} $\ast$ \hyperlink{classEmployeeManager_a24a120173edd4c5e0a65af90d1dc5c12}{Search\+By\+Name\+\_\+\+Linear} (string name)
+\begin{DoxyCompactList}\small\item\em Tries to locate employee by name using a linear search. \end{DoxyCompactList}\item 
+\hyperlink{structEmployee}{Employee} $\ast$ \hyperlink{classEmployeeManager_a25c3adbfb8b0085f2fdef2749633dbf6}{Search\+By\+Email\+\_\+\+Linear} (string email)
+\begin{DoxyCompactList}\small\item\em Tries to locate employee by email address using a linear search. \end{DoxyCompactList}\item 
+void \hyperlink{classEmployeeManager_a4eb4039afc670f1b31c95c6cfb7d1980}{Generate\+Id\+Index} ()
+\begin{DoxyCompactList}\small\item\em Generates a tree of \hyperlink{structEmployee}{Employee} pointers based on ids. \end{DoxyCompactList}\item 
+void \hyperlink{classEmployeeManager_acc8d5ab1c34f3d8a07bcb75352356ac0}{Generate\+Name\+Index} ()
+\begin{DoxyCompactList}\small\item\em Generates a tree of \hyperlink{structEmployee}{Employee} pointers based on names. \end{DoxyCompactList}\item 
+void \hyperlink{classEmployeeManager_a4cd4e6d8f002496d5d3e970262aa0899}{Generate\+Email\+Index} ()
+\begin{DoxyCompactList}\small\item\em Generates a tree of \hyperlink{structEmployee}{Employee} pointers based on email addressees. \end{DoxyCompactList}\item 
+int \hyperlink{classEmployeeManager_abafe9deccdf7d3369768fa6538464fb8}{Get\+Int\+Input} (int min, int max)
+\begin{DoxyCompactList}\small\item\em Ask user for input and returns valid input between the min and max values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ \hyperlink{structEmployee}{Employee} $>$ \hyperlink{classEmployeeManager_a5838e658d6a021dbdca4a4d8c5758db1}{m\+\_\+employee\+List}
+\item 
+\hyperlink{classBinarySearchTree}{Binary\+Search\+Tree}$<$ int, \hyperlink{structEmployee}{Employee} $\ast$ $>$ \hyperlink{classEmployeeManager_a7e325209532405be4bfb57f63aa65d7e}{m\+\_\+id\+Index}
+\item 
+\hyperlink{classBinarySearchTree}{Binary\+Search\+Tree}$<$ string, \hyperlink{structEmployee}{Employee} $\ast$ $>$ \hyperlink{classEmployeeManager_ac628fff397f71c6728a4d80fb93f3d12}{m\+\_\+name\+Index}
+\item 
+\hyperlink{classBinarySearchTree}{Binary\+Search\+Tree}$<$ string, \hyperlink{structEmployee}{Employee} $\ast$ $>$ \hyperlink{classEmployeeManager_ad90730c90bb1229b5b489e20acec544f}{m\+\_\+email\+Index}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Small program that stores a list of employees, as well as searchable trees. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Employee\+Manager@{Employee\+Manager}!Employee\+Manager@{Employee\+Manager}}
+\index{Employee\+Manager@{Employee\+Manager}!Employee\+Manager@{Employee\+Manager}}
+\subsubsection[{\texorpdfstring{Employee\+Manager()}{EmployeeManager()}}]{\setlength{\rightskip}{0pt plus 5cm}Employee\+Manager\+::\+Employee\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classEmployeeManager_aaa4729386d489d0f263b6fd4b406ad5f}{}\label{classEmployeeManager_aaa4729386d489d0f263b6fd4b406ad5f}
+
+
+\subsection{Member Function Documentation}
+\index{Employee\+Manager@{Employee\+Manager}!Generate\+Email\+Index@{Generate\+Email\+Index}}
+\index{Generate\+Email\+Index@{Generate\+Email\+Index}!Employee\+Manager@{Employee\+Manager}}
+\subsubsection[{\texorpdfstring{Generate\+Email\+Index()}{GenerateEmailIndex()}}]{\setlength{\rightskip}{0pt plus 5cm}void Employee\+Manager\+::\+Generate\+Email\+Index (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classEmployeeManager_a4cd4e6d8f002496d5d3e970262aa0899}{}\label{classEmployeeManager_a4cd4e6d8f002496d5d3e970262aa0899}
+
+
+Generates a tree of \hyperlink{structEmployee}{Employee} pointers based on email addressees. 
+
+\index{Employee\+Manager@{Employee\+Manager}!Generate\+Id\+Index@{Generate\+Id\+Index}}
+\index{Generate\+Id\+Index@{Generate\+Id\+Index}!Employee\+Manager@{Employee\+Manager}}
+\subsubsection[{\texorpdfstring{Generate\+Id\+Index()}{GenerateIdIndex()}}]{\setlength{\rightskip}{0pt plus 5cm}void Employee\+Manager\+::\+Generate\+Id\+Index (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classEmployeeManager_a4eb4039afc670f1b31c95c6cfb7d1980}{}\label{classEmployeeManager_a4eb4039afc670f1b31c95c6cfb7d1980}
+
+
+Generates a tree of \hyperlink{structEmployee}{Employee} pointers based on ids. 
+
+\index{Employee\+Manager@{Employee\+Manager}!Generate\+Name\+Index@{Generate\+Name\+Index}}
+\index{Generate\+Name\+Index@{Generate\+Name\+Index}!Employee\+Manager@{Employee\+Manager}}
+\subsubsection[{\texorpdfstring{Generate\+Name\+Index()}{GenerateNameIndex()}}]{\setlength{\rightskip}{0pt plus 5cm}void Employee\+Manager\+::\+Generate\+Name\+Index (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classEmployeeManager_acc8d5ab1c34f3d8a07bcb75352356ac0}{}\label{classEmployeeManager_acc8d5ab1c34f3d8a07bcb75352356ac0}
+
+
+Generates a tree of \hyperlink{structEmployee}{Employee} pointers based on names. 
+
+\index{Employee\+Manager@{Employee\+Manager}!Get\+Int\+Input@{Get\+Int\+Input}}
+\index{Get\+Int\+Input@{Get\+Int\+Input}!Employee\+Manager@{Employee\+Manager}}
+\subsubsection[{\texorpdfstring{Get\+Int\+Input(int min, int max)}{GetIntInput(int min, int max)}}]{\setlength{\rightskip}{0pt plus 5cm}int Employee\+Manager\+::\+Get\+Int\+Input (
+\begin{DoxyParamCaption}
+\item[{int}]{min, }
+\item[{int}]{max}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classEmployeeManager_abafe9deccdf7d3369768fa6538464fb8}{}\label{classEmployeeManager_abafe9deccdf7d3369768fa6538464fb8}
+
+
+Ask user for input and returns valid input between the min and max values. 
+
+\index{Employee\+Manager@{Employee\+Manager}!Load\+Employees@{Load\+Employees}}
+\index{Load\+Employees@{Load\+Employees}!Employee\+Manager@{Employee\+Manager}}
+\subsubsection[{\texorpdfstring{Load\+Employees()}{LoadEmployees()}}]{\setlength{\rightskip}{0pt plus 5cm}void Employee\+Manager\+::\+Load\+Employees (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classEmployeeManager_a799fffb1b9cf55d22192f518523b90bb}{}\label{classEmployeeManager_a799fffb1b9cf55d22192f518523b90bb}
+
+
+Loads the list of employees from the text file. 
+
+\index{Employee\+Manager@{Employee\+Manager}!Main\+Menu@{Main\+Menu}}
+\index{Main\+Menu@{Main\+Menu}!Employee\+Manager@{Employee\+Manager}}
+\subsubsection[{\texorpdfstring{Main\+Menu()}{MainMenu()}}]{\setlength{\rightskip}{0pt plus 5cm}void Employee\+Manager\+::\+Main\+Menu (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classEmployeeManager_a92e2e329960381bd3ff14f48c76fc7db}{}\label{classEmployeeManager_a92e2e329960381bd3ff14f48c76fc7db}
+
+
+Allows user to select whether to search by ID, name, or email address. 
+
+\index{Employee\+Manager@{Employee\+Manager}!Search\+By\+Email@{Search\+By\+Email}}
+\index{Search\+By\+Email@{Search\+By\+Email}!Employee\+Manager@{Employee\+Manager}}
+\subsubsection[{\texorpdfstring{Search\+By\+Email()}{SearchByEmail()}}]{\setlength{\rightskip}{0pt plus 5cm}void Employee\+Manager\+::\+Search\+By\+Email (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classEmployeeManager_a33fffec39403a45d3e993bacdeb3582b}{}\label{classEmployeeManager_a33fffec39403a45d3e993bacdeb3582b}
+
+
+Does a search for an employee by email address using linear search and the binary search tree, compares result times. 
+
+\index{Employee\+Manager@{Employee\+Manager}!Search\+By\+Email\+\_\+\+Linear@{Search\+By\+Email\+\_\+\+Linear}}
+\index{Search\+By\+Email\+\_\+\+Linear@{Search\+By\+Email\+\_\+\+Linear}!Employee\+Manager@{Employee\+Manager}}
+\subsubsection[{\texorpdfstring{Search\+By\+Email\+\_\+\+Linear(string email)}{SearchByEmail_Linear(string email)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Employee} $\ast$ Employee\+Manager\+::\+Search\+By\+Email\+\_\+\+Linear (
+\begin{DoxyParamCaption}
+\item[{string}]{email}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classEmployeeManager_a25c3adbfb8b0085f2fdef2749633dbf6}{}\label{classEmployeeManager_a25c3adbfb8b0085f2fdef2749633dbf6}
+
+
+Tries to locate employee by email address using a linear search. 
+
+\index{Employee\+Manager@{Employee\+Manager}!Search\+By\+Email\+\_\+\+Tree@{Search\+By\+Email\+\_\+\+Tree}}
+\index{Search\+By\+Email\+\_\+\+Tree@{Search\+By\+Email\+\_\+\+Tree}!Employee\+Manager@{Employee\+Manager}}
+\subsubsection[{\texorpdfstring{Search\+By\+Email\+\_\+\+Tree(string email)}{SearchByEmail_Tree(string email)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Employee} $\ast$ Employee\+Manager\+::\+Search\+By\+Email\+\_\+\+Tree (
+\begin{DoxyParamCaption}
+\item[{string}]{email}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classEmployeeManager_aa35d0748e3b7a34f40f24e5b7ae4ad53}{}\label{classEmployeeManager_aa35d0748e3b7a34f40f24e5b7ae4ad53}
+
+
+Tries to locate employee by email address using the tree index. 
+
+\index{Employee\+Manager@{Employee\+Manager}!Search\+By\+Id@{Search\+By\+Id}}
+\index{Search\+By\+Id@{Search\+By\+Id}!Employee\+Manager@{Employee\+Manager}}
+\subsubsection[{\texorpdfstring{Search\+By\+Id()}{SearchById()}}]{\setlength{\rightskip}{0pt plus 5cm}void Employee\+Manager\+::\+Search\+By\+Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classEmployeeManager_a01e5b7d43448c1e9f8d2d1f4f1fc537b}{}\label{classEmployeeManager_a01e5b7d43448c1e9f8d2d1f4f1fc537b}
+
+
+Does a search for an employee by id using linear search and the binary search tree, compares result times. 
+
+\index{Employee\+Manager@{Employee\+Manager}!Search\+By\+Id\+\_\+\+Linear@{Search\+By\+Id\+\_\+\+Linear}}
+\index{Search\+By\+Id\+\_\+\+Linear@{Search\+By\+Id\+\_\+\+Linear}!Employee\+Manager@{Employee\+Manager}}
+\subsubsection[{\texorpdfstring{Search\+By\+Id\+\_\+\+Linear(int index)}{SearchById_Linear(int index)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Employee} $\ast$ Employee\+Manager\+::\+Search\+By\+Id\+\_\+\+Linear (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classEmployeeManager_af2d57cf6bc77893edfef2a1403c993c9}{}\label{classEmployeeManager_af2d57cf6bc77893edfef2a1403c993c9}
+
+
+Tries to locate employee by id using a linear search. 
+
+\index{Employee\+Manager@{Employee\+Manager}!Search\+By\+Id\+\_\+\+Tree@{Search\+By\+Id\+\_\+\+Tree}}
+\index{Search\+By\+Id\+\_\+\+Tree@{Search\+By\+Id\+\_\+\+Tree}!Employee\+Manager@{Employee\+Manager}}
+\subsubsection[{\texorpdfstring{Search\+By\+Id\+\_\+\+Tree(int index)}{SearchById_Tree(int index)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Employee} $\ast$ Employee\+Manager\+::\+Search\+By\+Id\+\_\+\+Tree (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classEmployeeManager_a4bf226cae634590b42ae7daf26ae7a5a}{}\label{classEmployeeManager_a4bf226cae634590b42ae7daf26ae7a5a}
+
+
+Tries to locate employee by id using the tree index. 
+
+\index{Employee\+Manager@{Employee\+Manager}!Search\+By\+Name@{Search\+By\+Name}}
+\index{Search\+By\+Name@{Search\+By\+Name}!Employee\+Manager@{Employee\+Manager}}
+\subsubsection[{\texorpdfstring{Search\+By\+Name()}{SearchByName()}}]{\setlength{\rightskip}{0pt plus 5cm}void Employee\+Manager\+::\+Search\+By\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classEmployeeManager_a5d0bf6fe40143665f043cba70c0e9654}{}\label{classEmployeeManager_a5d0bf6fe40143665f043cba70c0e9654}
+
+
+Does a search for an employee by name using linear search and the binary search tree, compares result times. 
+
+\index{Employee\+Manager@{Employee\+Manager}!Search\+By\+Name\+\_\+\+Linear@{Search\+By\+Name\+\_\+\+Linear}}
+\index{Search\+By\+Name\+\_\+\+Linear@{Search\+By\+Name\+\_\+\+Linear}!Employee\+Manager@{Employee\+Manager}}
+\subsubsection[{\texorpdfstring{Search\+By\+Name\+\_\+\+Linear(string name)}{SearchByName_Linear(string name)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Employee} $\ast$ Employee\+Manager\+::\+Search\+By\+Name\+\_\+\+Linear (
+\begin{DoxyParamCaption}
+\item[{string}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classEmployeeManager_a24a120173edd4c5e0a65af90d1dc5c12}{}\label{classEmployeeManager_a24a120173edd4c5e0a65af90d1dc5c12}
+
+
+Tries to locate employee by name using a linear search. 
+
+\index{Employee\+Manager@{Employee\+Manager}!Search\+By\+Name\+\_\+\+Tree@{Search\+By\+Name\+\_\+\+Tree}}
+\index{Search\+By\+Name\+\_\+\+Tree@{Search\+By\+Name\+\_\+\+Tree}!Employee\+Manager@{Employee\+Manager}}
+\subsubsection[{\texorpdfstring{Search\+By\+Name\+\_\+\+Tree(string name)}{SearchByName_Tree(string name)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Employee} $\ast$ Employee\+Manager\+::\+Search\+By\+Name\+\_\+\+Tree (
+\begin{DoxyParamCaption}
+\item[{string}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classEmployeeManager_a462f98c10a16addf9656f1e59ae109ed}{}\label{classEmployeeManager_a462f98c10a16addf9656f1e59ae109ed}
+
+
+Tries to locate employee by name using the tree index. 
+
+
+
+\subsection{Member Data Documentation}
+\index{Employee\+Manager@{Employee\+Manager}!m\+\_\+email\+Index@{m\+\_\+email\+Index}}
+\index{m\+\_\+email\+Index@{m\+\_\+email\+Index}!Employee\+Manager@{Employee\+Manager}}
+\subsubsection[{\texorpdfstring{m\+\_\+email\+Index}{m_emailIndex}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Binary\+Search\+Tree}$<$string, {\bf Employee}$\ast$$>$ Employee\+Manager\+::m\+\_\+email\+Index\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classEmployeeManager_ad90730c90bb1229b5b489e20acec544f}{}\label{classEmployeeManager_ad90730c90bb1229b5b489e20acec544f}
+\index{Employee\+Manager@{Employee\+Manager}!m\+\_\+employee\+List@{m\+\_\+employee\+List}}
+\index{m\+\_\+employee\+List@{m\+\_\+employee\+List}!Employee\+Manager@{Employee\+Manager}}
+\subsubsection[{\texorpdfstring{m\+\_\+employee\+List}{m_employeeList}}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Employee}$>$ Employee\+Manager\+::m\+\_\+employee\+List\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classEmployeeManager_a5838e658d6a021dbdca4a4d8c5758db1}{}\label{classEmployeeManager_a5838e658d6a021dbdca4a4d8c5758db1}
+\index{Employee\+Manager@{Employee\+Manager}!m\+\_\+id\+Index@{m\+\_\+id\+Index}}
+\index{m\+\_\+id\+Index@{m\+\_\+id\+Index}!Employee\+Manager@{Employee\+Manager}}
+\subsubsection[{\texorpdfstring{m\+\_\+id\+Index}{m_idIndex}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Binary\+Search\+Tree}$<$int, {\bf Employee}$\ast$$>$ Employee\+Manager\+::m\+\_\+id\+Index\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classEmployeeManager_a7e325209532405be4bfb57f63aa65d7e}{}\label{classEmployeeManager_a7e325209532405be4bfb57f63aa65d7e}
+\index{Employee\+Manager@{Employee\+Manager}!m\+\_\+name\+Index@{m\+\_\+name\+Index}}
+\index{m\+\_\+name\+Index@{m\+\_\+name\+Index}!Employee\+Manager@{Employee\+Manager}}
+\subsubsection[{\texorpdfstring{m\+\_\+name\+Index}{m_nameIndex}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Binary\+Search\+Tree}$<$string, {\bf Employee}$\ast$$>$ Employee\+Manager\+::m\+\_\+name\+Index\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classEmployeeManager_ac628fff397f71c6728a4d80fb93f3d12}{}\label{classEmployeeManager_ac628fff397f71c6728a4d80fb93f3d12}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{EmployeeManager_8hpp}{Employee\+Manager.\+hpp}\item 
+\hyperlink{EmployeeManager_8cpp}{Employee\+Manager.\+cpp}\end{DoxyCompactItemize}

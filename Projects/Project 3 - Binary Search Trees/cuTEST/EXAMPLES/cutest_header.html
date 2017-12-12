@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> cuTEST Test Results </title>
+
+        <style type="text/css">
+            body { font-family: monospace; font-size: 1.5em; }
+
+            table { width: 100%; border: solid 1px #aaaaaa; }
+            table tr.pass { background: #ccffcc; }
+            table tr.fail { background: #ffcccc; }
+
+            table tr.summary { background: #000000; color: #ffffff; }
+
+            table tr.descriptions { font-size: 8pt; text-align: center; }
+
+            table .col_set      { width: 10%; }
+            table .col_test     { width: 20%; }
+            table .col_prereq   { width: 10%; }
+            table .col_result   { width: 5%; }
+            table .col_expected { width: 10%; }
+            table .col_actual   { width: 10%; }
+            table .col_comments { width: 35%; }
+            table .spacer { height: 100px; }
+        </style>
+    </head>
+
+    <body>
+
+    <table>
+        <tr>
+            <th class="col_set"> Test set </th>
+            <th class="col_test"> Test </th>
+            <th class="col_prereq"> Prerequisite functions </th>
+            <th class="col_result"> Pass/fail </th>
+            <th class="col_expected"> Expected output </th>
+            <th class="col_actual"> Actual output </th>
+            <th class="col_comments"> Comments </th>
+        </tr>
+
+        <tr class="descriptions">
+            <td>  </td>
+            <td>  </td>
+            <td> Functions that need to be implemented for these tests to work right </td>
+            <td>  </td>
+            <td> The output expected from the function's return </td>
+            <td> What was actually returned from the function </td>
+            <td> Additional notes from the test </td>
+        </tr>

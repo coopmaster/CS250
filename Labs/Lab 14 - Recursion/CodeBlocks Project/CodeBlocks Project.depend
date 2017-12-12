@@ -1,0 +1,31 @@
+# depslib dependency file v1.0
+1509914010 source:/home/rayechell/TEACHING/cs250/CS250-Data-Structures/Assignments/Labs/starter files/Lab 13 - Trees/lab13_main.cpp
+	<iostream>
+	<string>
+	"lab13_Filesystem.hpp"
+
+1509830548 /home/rayechell/TEACHING/cs250/CS250-Data-Structures/Assignments/Labs/starter files/Lab 13 - Trees/lab13_Filesystem.hpp
+	<iostream>
+	<vector>
+	<list>
+	"StringUtil.hpp"
+
+1509830542 /home/rayechell/TEACHING/cs250/CS250-Data-Structures/Assignments/Labs/starter files/Lab 13 - Trees/StringUtil.hpp
+	<string>
+	<sstream>
+
+1509988788 source:n:\school\2017 fall\lab 14 - recursion\lab14_main.cpp
+	<iostream>
+	<string>
+	"lab14_Filesystem.hpp"
+
+1510704553 n:\school\2017 fall\lab 14 - recursion\lab14_filesystem.hpp
+	<iostream>
+	<vector>
+	<list>
+	"StringUtil.hpp"
+
+1509830542 n:\school\2017 fall\lab 14 - recursion\stringutil.hpp
+	<string>
+	<sstream>
+

@@ -1,0 +1,145 @@
+\hypertarget{classTimer}{}\section{Timer Class Reference}
+\label{classTimer}\index{Timer@{Timer}}
+
+
+{\ttfamily \#include $<$Timer.\+hpp$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classTimer_a4e607b129b392c11adddd9641a320436}{Start} ()
+\begin{DoxyCompactList}\small\item\em Starts the timer (logs the system clock at time called) \end{DoxyCompactList}\item 
+static float \hyperlink{classTimer_ae86a26d075c154ca068fb1da5e44f4ad}{Get\+Ticks} ()
+\begin{DoxyCompactList}\small\item\em Returns the amount of time elapsed, in ticks. \end{DoxyCompactList}\item 
+static float \hyperlink{classTimer_a4822f3d31f7aa331b1197c56a321eebe}{Get\+Seconds} ()
+\begin{DoxyCompactList}\small\item\em Returns the amount of time elapsed, in seconds. \end{DoxyCompactList}\item 
+static void \hyperlink{classTimer_a207f24813c54b787ae4de5d109d304ae}{Display\+Seconds} ()
+\begin{DoxyCompactList}\small\item\em Displays the amount of time elapsed, in seconds. \end{DoxyCompactList}\item 
+static float \hyperlink{classTimer_aa97a596bebfa5b8c0d7491066ae3f931}{Get\+Milliseconds} ()
+\begin{DoxyCompactList}\small\item\em Returns the amount of time elapsed, in milliseconds. \end{DoxyCompactList}\item 
+static void \hyperlink{classTimer_a937acc867bb310cc69dfac532bcd0151}{Display\+Milliseconds} ()
+\begin{DoxyCompactList}\small\item\em Displays the amount of time elapsed, in milliseconds. \end{DoxyCompactList}\item 
+static float \hyperlink{classTimer_a334645ee3c57b07c74db4b90bdaaf645}{Get\+Microseconds} ()
+\begin{DoxyCompactList}\small\item\em Returns the amount of time elapsed, in microseconds. \end{DoxyCompactList}\item 
+static void \hyperlink{classTimer_a33025780fe7b6b4e6c2b188fdd3003de}{Display\+Microseconds} ()
+\begin{DoxyCompactList}\small\item\em Displays the amount of time elapsed, in microseconds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static chrono\+::duration$<$ double $>$ \hyperlink{classTimer_a4b336a902a415484f0834d95b5f1ef9d}{Get\+Elapsed\+Time} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static chrono\+::system\+\_\+clock\+::time\+\_\+point \hyperlink{classTimer_a177937da30a93f0ba8ac9fe97c891c3e}{m\+\_\+start\+Time}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\index{Timer@{Timer}!Display\+Microseconds@{Display\+Microseconds}}
+\index{Display\+Microseconds@{Display\+Microseconds}!Timer@{Timer}}
+\subsubsection[{\texorpdfstring{Display\+Microseconds()}{DisplayMicroseconds()}}]{\setlength{\rightskip}{0pt plus 5cm}void Timer\+::\+Display\+Microseconds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classTimer_a33025780fe7b6b4e6c2b188fdd3003de}{}\label{classTimer_a33025780fe7b6b4e6c2b188fdd3003de}
+
+
+Displays the amount of time elapsed, in microseconds. 
+
+\index{Timer@{Timer}!Display\+Milliseconds@{Display\+Milliseconds}}
+\index{Display\+Milliseconds@{Display\+Milliseconds}!Timer@{Timer}}
+\subsubsection[{\texorpdfstring{Display\+Milliseconds()}{DisplayMilliseconds()}}]{\setlength{\rightskip}{0pt plus 5cm}void Timer\+::\+Display\+Milliseconds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classTimer_a937acc867bb310cc69dfac532bcd0151}{}\label{classTimer_a937acc867bb310cc69dfac532bcd0151}
+
+
+Displays the amount of time elapsed, in milliseconds. 
+
+\index{Timer@{Timer}!Display\+Seconds@{Display\+Seconds}}
+\index{Display\+Seconds@{Display\+Seconds}!Timer@{Timer}}
+\subsubsection[{\texorpdfstring{Display\+Seconds()}{DisplaySeconds()}}]{\setlength{\rightskip}{0pt plus 5cm}void Timer\+::\+Display\+Seconds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classTimer_a207f24813c54b787ae4de5d109d304ae}{}\label{classTimer_a207f24813c54b787ae4de5d109d304ae}
+
+
+Displays the amount of time elapsed, in seconds. 
+
+\index{Timer@{Timer}!Get\+Elapsed\+Time@{Get\+Elapsed\+Time}}
+\index{Get\+Elapsed\+Time@{Get\+Elapsed\+Time}!Timer@{Timer}}
+\subsubsection[{\texorpdfstring{Get\+Elapsed\+Time()}{GetElapsedTime()}}]{\setlength{\rightskip}{0pt plus 5cm}chrono\+::duration$<$ double $>$ Timer\+::\+Get\+Elapsed\+Time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\hypertarget{classTimer_a4b336a902a415484f0834d95b5f1ef9d}{}\label{classTimer_a4b336a902a415484f0834d95b5f1ef9d}
+\index{Timer@{Timer}!Get\+Microseconds@{Get\+Microseconds}}
+\index{Get\+Microseconds@{Get\+Microseconds}!Timer@{Timer}}
+\subsubsection[{\texorpdfstring{Get\+Microseconds()}{GetMicroseconds()}}]{\setlength{\rightskip}{0pt plus 5cm}float Timer\+::\+Get\+Microseconds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classTimer_a334645ee3c57b07c74db4b90bdaaf645}{}\label{classTimer_a334645ee3c57b07c74db4b90bdaaf645}
+
+
+Returns the amount of time elapsed, in microseconds. 
+
+\index{Timer@{Timer}!Get\+Milliseconds@{Get\+Milliseconds}}
+\index{Get\+Milliseconds@{Get\+Milliseconds}!Timer@{Timer}}
+\subsubsection[{\texorpdfstring{Get\+Milliseconds()}{GetMilliseconds()}}]{\setlength{\rightskip}{0pt plus 5cm}float Timer\+::\+Get\+Milliseconds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classTimer_aa97a596bebfa5b8c0d7491066ae3f931}{}\label{classTimer_aa97a596bebfa5b8c0d7491066ae3f931}
+
+
+Returns the amount of time elapsed, in milliseconds. 
+
+\index{Timer@{Timer}!Get\+Seconds@{Get\+Seconds}}
+\index{Get\+Seconds@{Get\+Seconds}!Timer@{Timer}}
+\subsubsection[{\texorpdfstring{Get\+Seconds()}{GetSeconds()}}]{\setlength{\rightskip}{0pt plus 5cm}float Timer\+::\+Get\+Seconds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classTimer_a4822f3d31f7aa331b1197c56a321eebe}{}\label{classTimer_a4822f3d31f7aa331b1197c56a321eebe}
+
+
+Returns the amount of time elapsed, in seconds. 
+
+\index{Timer@{Timer}!Get\+Ticks@{Get\+Ticks}}
+\index{Get\+Ticks@{Get\+Ticks}!Timer@{Timer}}
+\subsubsection[{\texorpdfstring{Get\+Ticks()}{GetTicks()}}]{\setlength{\rightskip}{0pt plus 5cm}float Timer\+::\+Get\+Ticks (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classTimer_ae86a26d075c154ca068fb1da5e44f4ad}{}\label{classTimer_ae86a26d075c154ca068fb1da5e44f4ad}
+
+
+Returns the amount of time elapsed, in ticks. 
+
+\index{Timer@{Timer}!Start@{Start}}
+\index{Start@{Start}!Timer@{Timer}}
+\subsubsection[{\texorpdfstring{Start()}{Start()}}]{\setlength{\rightskip}{0pt plus 5cm}void Timer\+::\+Start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classTimer_a4e607b129b392c11adddd9641a320436}{}\label{classTimer_a4e607b129b392c11adddd9641a320436}
+
+
+Starts the timer (logs the system clock at time called) 
+
+
+
+\subsection{Member Data Documentation}
+\index{Timer@{Timer}!m\+\_\+start\+Time@{m\+\_\+start\+Time}}
+\index{m\+\_\+start\+Time@{m\+\_\+start\+Time}!Timer@{Timer}}
+\subsubsection[{\texorpdfstring{m\+\_\+start\+Time}{m_startTime}}]{\setlength{\rightskip}{0pt plus 5cm}chrono\+::system\+\_\+clock\+::time\+\_\+point Timer\+::m\+\_\+start\+Time\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\hypertarget{classTimer_a177937da30a93f0ba8ac9fe97c891c3e}{}\label{classTimer_a177937da30a93f0ba8ac9fe97c891c3e}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Timer_8hpp}{Timer.\+hpp}\item 
+\hyperlink{Timer_8cpp}{Timer.\+cpp}\end{DoxyCompactItemize}

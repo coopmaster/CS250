@@ -1,0 +1,182 @@
+\subsection*{Introduction}
+
+Get tree height Insert a noifde Delete a node Contains Max\+Element
+
+Display In\+Order, Pre\+Order, Post\+Order
+
+On paper\+: Balacing a search tree...
+
+On paper\+: Efficiency of algorithms...
+
+Scan pages 298 -\/ 314 of Data Structures and Algorithms for Game Developers
+
+\subsection*{Starter files}
+
+\subsection*{Turn-\/\+In}
+
+
+\begin{DoxyItemize}
+\item Turn in your {\bfseries Student\+Table.\+cpp} and {\bfseries Student\+Table.\+hpp} files!
+\end{DoxyItemize}
+
+\subsection*{Group work policy}
+
+
+\begin{DoxyItemize}
+\item This project is a {\bfseries solo effort}.
+\item You can brainstorm with others, but you cannot code together, share code, etc. 
+
+
+\end{DoxyItemize}
+
+\section*{Dictionary basics}
+
+If you\textquotesingle{}re familiar with other programming languages like Python, Lua, P\+HP, or Java\+Script, or have used the map S\+TL structure in C++, you might be familiar with the idea of storing data in an array, but having the {\bfseries key} be something other than an integer index from {\itshape 0} to {\itshape size-\/1}.
+
+A key of a dictionary can be any data-\/type, and the value of a dictionary can be any data-\/type. This is the layer that other programmers see...
+
+
+\begin{DoxyCode}
+1 \{c++\}
+2 class Entry
+3 \{
+4     public:
+5     string key;
+6     string value;
+7 \};
+\end{DoxyCode}
+
+
+But within the dictionary, we store a simple array of Entry elements.
+
+
+\begin{DoxyCode}
+1 \{c++\}
+2 class Dictionary
+3 \{
+4     /// ...
+5     private:
+6     Entry entries[100];
+7     // ...
+8 \}
+\end{DoxyCode}
+ And our dictionary should have a {\bfseries hashing function} that gives us an index for this simple array, given the {\bfseries key} of our Entry.
+
+\subsection*{Hash Functions}
+
+The Dictionary {\bfseries key} can be any data type, but we need a way to {\itshape map} the key to an integer index. This is where the Hash function comes in.
+
+If two keys generate the same {\bfseries hash key}, then we have a collision and have to decide on a method to solve the problem. More on that later.
+
+There are \href{https://en.wikipedia.org/wiki/Hash_function#Hash_function_algorithms}{\tt different Hash function algorithms} that can be used, with their own pros/cons.
+
+\subsubsection*{Integer keys}
+
+If our keys are simple integers, then we could potentially just take {\itshape key modulus table\+Size} to get an index. However, to reduce the likelihood of collisions, this works best if the table size is a {\itshape prime number}.
+
+Let\textquotesingle{}s say we have a table whose size is 13, and we are hashing student I\+Ds, so to find the index in the table (the array), we will do simple modulus\+: \begin{DoxyVerb}Student # 1068777
+    1068777 % 13 = 8
+
+Student # 1013582
+    1068777 % 13 = 11
+
+Student # 1087654
+    1087654 % 13 = 9
+
+Student # 1079255
+    1079255 % 13 = 8        COLLISION!
+\end{DoxyVerb}
+
+
+This works fine but we can get collisions. How to resolve these is below.
+
+\subsection*{Collisions and solutions}
+
+When two keys generate the same index via the hash function, we need a way to resolve the {\bfseries collision}. A few common ways are...
+
+\subsubsection*{Linear probing}
+
+With Linear probing, you just keep moving forward one index until you find a free slot in the array, and place the item there.
+
+If a lot of items end up being stored in the array contiguously, one-\/after-\/another, then this could be slow. However, if all the items in the array are spread out, this might not be too bad.
+
+Before collision\+:
+
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*14{|X[-1]}|}
+\hline
+{\bf Index }&0 &1 &2 &3 &4 &5 &6 &7 &8 &9 &10 &11 &12  \\\cline{1-14}
+{\bf Value }&-\/ &-\/ &-\/ &-\/ &-\/ &-\/ &-\/ &-\/ &1068777 &1087654 &-\/ &1068777 &-\/  \\\cline{1-14}
+\end{longtabu}
+
+
+At this point, we have the three student I\+Ds inserted. But when we want to insert {\itshape 1079255}, it gives us an index of 8, and we have a collision.
+
+Using linear probing, we would look at the next index, {\itshape 9}, and see that it is also taken. So we move forward once more.
+
+Index {\itshape 10} is free, so student \#1079255 would go into index 10 under the Linear probing strategy.
+
+Of course, if we hit the end of the array, we wrap back around to the beginning!
+
+\subsubsection*{Quadratic probing}
+
+With Quadratic probing, if there is a collision we change the amount we look forward each time...\+:
+
+
+\begin{DoxyItemize}
+\item First collision\+: Check {\itshape hash\+Index + 2}
+\item Second collision\+: Check {\itshape hash\+Index + 2\textsuperscript{2}}
+\item Third collision\+: Chekc {\itshape hash\+Index + 2\textsuperscript{3}}
+\item etc.
+\end{DoxyItemize}
+
+So once again, before collision\+:
+
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*14{|X[-1]}|}
+\hline
+{\bf Index }&0 &1 &2 &3 &4 &5 &6 &7 &8 &9 &10 &11 &12  \\\cline{1-14}
+{\bf Value }&-\/ &-\/ &-\/ &-\/ &-\/ &-\/ &-\/ &-\/ &1068777 &1087654 &-\/ &1068777 &-\/  \\\cline{1-14}
+\end{longtabu}
+
+
+
+\begin{DoxyItemize}
+\item Hash of 1079255 is 8 -\/ C\+O\+L\+L\+I\+S\+I\+ON
+\item Try 8+1\textsuperscript{2}, which is 9 -\/ C\+O\+L\+L\+I\+S\+I\+ON
+\item Try 8+2\textsuperscript{2}, which is 12 -\/ No collision
+\end{DoxyItemize}
+
+So with Quadratic probing, {\itshape 1079255} would be inserted at index {\itshape 12}.
+
+\subsubsection*{Double Hashing}
+
+Another option is to have two hash functions\+: The first hash function, as usual, determines the {\itshape index}, which is used as a {\itshape starting location}. If there is a collision, then a second hash funtion generates the {\itshape amount of steps to take} past the {\itshape starting location}, to find a place to put the new data.
+
+Let\textquotesingle{}s say we have the following hash functions\+:
+
+
+\begin{DoxyItemize}
+\item Primary hash function\+: h\textsubscript{1}( key ) = key \% 11
+\item Secondary hash function\+: h\textsubscript{2}( key ) = 7 -\/ ( key \% 7 )
+\end{DoxyItemize}
+
+So if our primary hash function gives us an index that results in a collision, we plug the key into the secondary hash function, and add the two results together.
+
+If there continues being collisions, we add the result of h\textsubscript{2} again, until we find an empty spot.
+
+\subsection*{Clustering}
+
+One of the challenges of Dictionaries is the problem of too many items being grouped nearby together. If we\textquotesingle{}re using linear probing, and hit a collision, and many items are back-\/to-\/back, we will end up moving forward one step at a time, checking the value at that position, and repeating until we find an empty space.
+
+When elements are close together, this is known as {\bfseries clustering}. As clusters form, the Dictionary gets less efficient and more time is spent finding an index for items. 
+
+
+
+\section*{Project specifications}
+
+2003 
+
+
+
+\section*{Grading rubric}

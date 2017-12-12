@@ -1,0 +1,21 @@
+1a) A parameter is the variable passed into a function, and an argument is the data passed into the parameters.
+1b) In an array the index is the location of data and the data is called elements.
+
+2a) clear
+2b) insert, and push_back
+
+3a) size
+3b) reverse
+
+4a) push
+4b) pop
+4c) front
+4d) empty
+
+5a) push
+5b) pop
+5c) top
+5d) stacks are last-in first-out and queues are first-in first-out
+
+6a) keys are values that identify the elements
+6b) values are the main content of the element

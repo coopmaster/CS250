@@ -1,0 +1,455 @@
+\hypertarget{classBinarySearchTree}{}\section{Binary\+Search\+Tree$<$ TK, TD $>$ Class Template Reference}
+\label{classBinarySearchTree}\index{Binary\+Search\+Tree$<$ T\+K, T\+D $>$@{Binary\+Search\+Tree$<$ T\+K, T\+D $>$}}
+
+
+A template binary search tree class.  
+
+
+
+
+{\ttfamily \#include $<$Binary\+Search\+Tree.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classBinarySearchTree_a3de2ca8efd1455d1ced09d49828cb75f}{Binary\+Search\+Tree} ()
+\begin{DoxyCompactList}\small\item\em Initializes the node count to 0, and the root pointer to nullptr. \end{DoxyCompactList}\item 
+\hyperlink{classBinarySearchTree_a32908378e03fb3dc0c515b65c81c17c6}{$\sim$\+Binary\+Search\+Tree} ()
+\begin{DoxyCompactList}\small\item\em Destroys the root node. \end{DoxyCompactList}\item 
+void \hyperlink{classBinarySearchTree_ab1214eb6e3d8cfb63f60c6345dc64b31}{Insert} (const TK \&new\+Key, const TD \&new\+Data)
+\begin{DoxyCompactList}\small\item\em Creates a new node for the tree and assigns the data of that node to the parameter passed in. \end{DoxyCompactList}\item 
+void \hyperlink{classBinarySearchTree_a1b7b6c893bd995f99522866a3cee1f04}{Delete} (const TK \&key)
+\begin{DoxyCompactList}\small\item\em Deletes the \hyperlink{classNode}{Node} that contains the given data, if it exists in the tree. \end{DoxyCompactList}\item 
+bool \hyperlink{classBinarySearchTree_a34d99fb23656d7c88ede34373991ce75}{Contains} (const TK \&key)
+\begin{DoxyCompactList}\small\item\em Searches the tree for the key provided and returns true if found, false if not. \end{DoxyCompactList}\item 
+string \hyperlink{classBinarySearchTree_af91f7e6c512aa0ff6e3d75a1d8cc0746}{Get\+In\+Order} ()
+\begin{DoxyCompactList}\small\item\em Displays the keys of the nodes in the tree, in in-\/order format. \end{DoxyCompactList}\item 
+string \hyperlink{classBinarySearchTree_a5bf79ef6e69aa6ac90a9aa69eda5fc2f}{Get\+Pre\+Order} ()
+\begin{DoxyCompactList}\small\item\em Displays the keys of the nodes in the tree, in pre-\/order format. \end{DoxyCompactList}\item 
+string \hyperlink{classBinarySearchTree_a955641b38b09fad48dff386212b5e692}{Get\+Post\+Order} ()
+\begin{DoxyCompactList}\small\item\em Displays the keys of the nodes in the tree, in post-\/order format. \end{DoxyCompactList}\item 
+TK $\ast$ \hyperlink{classBinarySearchTree_acadafc04cb0d80f8bb8127bec3617c18}{Get\+Max} ()
+\begin{DoxyCompactList}\small\item\em Returns the largest value in the tree. \end{DoxyCompactList}\item 
+int \hyperlink{classBinarySearchTree_a549c69be4369b93719fabafb10eed383}{Get\+Count} ()
+\begin{DoxyCompactList}\small\item\em Returns the amount of nodes in the tree. \end{DoxyCompactList}\item 
+int \hyperlink{classBinarySearchTree_a024149bb1d2b82953d691c6312916c1a}{Get\+Height} ()
+\begin{DoxyCompactList}\small\item\em Returns the height of the entire tree; must be max height. \end{DoxyCompactList}\item 
+TD $\ast$ \hyperlink{classBinarySearchTree_ad07f224e9b68ef681ddec73f0cd6e56e}{Get\+Data} (const TK \&key)
+\begin{DoxyCompactList}\small\item\em Returns the data based on a key passed in, or nullptr if not present. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classNode}{Node}$<$ TK, TD $>$ $\ast$ \hyperlink{classBinarySearchTree_a46d382c3d81f26edc48a683d98127b43}{Find\+Node} (const TK \&key)
+\begin{DoxyCompactList}\small\item\em Returns the Node$\ast$ that contains the key, or nullptr if data is not in the tree. \end{DoxyCompactList}\item 
+\hyperlink{classNode}{Node}$<$ TK, TD $>$ $\ast$ \hyperlink{classBinarySearchTree_a906da8772ab4d89b68f725a813de5706}{Find\+Parent\+Of\+Node} (const TK \&key)
+\begin{DoxyCompactList}\small\item\em Returns the P\+A\+R\+E\+NT Node$\ast$ of the Node$\ast$ that contains the key, or nullptr if data is not in the tree. \end{DoxyCompactList}\item 
+void \hyperlink{classBinarySearchTree_abc7ae8df7f28600e52fc18283ac74d4e}{Recursive\+Insert} (const TK \&new\+Key, const TD \&new\+Data, \hyperlink{classNode}{Node}$<$ TK, TD $>$ $\ast$ptr\+Current)
+\begin{DoxyCompactList}\small\item\em Recurses through the tree and finds the proper location for the new data. \end{DoxyCompactList}\item 
+void \hyperlink{classBinarySearchTree_ae32eaf601ac4c20a71c818f905e20e2e}{Get\+In\+Order} (\hyperlink{classNode}{Node}$<$ TK, TD $>$ $\ast$ptr\+Current, stringstream \&stream)
+\begin{DoxyCompactList}\small\item\em Recurses through the tree in I\+N-\/\+O\+R\+D\+ER order, writing to the stream. \end{DoxyCompactList}\item 
+void \hyperlink{classBinarySearchTree_ae67bb354708055152757d27d99d569bb}{Get\+Pre\+Order} (\hyperlink{classNode}{Node}$<$ TK, TD $>$ $\ast$ptr\+Current, stringstream \&stream)
+\begin{DoxyCompactList}\small\item\em Recurses through the tree in P\+R\+E-\/\+O\+R\+D\+ER order, writing to the stream. \end{DoxyCompactList}\item 
+void \hyperlink{classBinarySearchTree_ab6c97fbe7406de99a7c6d90247eb47c3}{Get\+Post\+Order} (\hyperlink{classNode}{Node}$<$ TK, TD $>$ $\ast$ptr\+Current, stringstream \&stream)
+\begin{DoxyCompactList}\small\item\em Recurses through the tree in P\+O\+S\+T-\/\+O\+R\+D\+ER order, writing to the stream. \end{DoxyCompactList}\item 
+TK $\ast$ \hyperlink{classBinarySearchTree_a2792ab45f6037873d8d73b2bcfa40d8f}{Get\+Max} (\hyperlink{classNode}{Node}$<$ TK, TD $>$ $\ast$ptr\+Current)
+\begin{DoxyCompactList}\small\item\em Recurses through the tree, going to the right-\/child-\/nodes until the max key is found. \end{DoxyCompactList}\item 
+int \hyperlink{classBinarySearchTree_a0e871429a131d331b831334d57888211}{Get\+Height} (\hyperlink{classNode}{Node}$<$ TK, TD $>$ $\ast$ptr\+Current)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classNode}{Node}$<$ TK, TD $>$ $\ast$ \hyperlink{classBinarySearchTree_a721f28bd510e040b8573bdb1a19744ba}{m\+\_\+ptr\+Root}
+\begin{DoxyCompactList}\small\item\em A pointer to the root node of the tree; TK = data type of the key, TD = data type of the data. \end{DoxyCompactList}\item 
+int \hyperlink{classBinarySearchTree_a619940c056dcb8aa8246ada1e7ca2e2c}{m\+\_\+node\+Count}
+\begin{DoxyCompactList}\small\item\em The amount of nodes in the tree. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classBinarySearchTree_a8da748c2b0afd5c6b23e931591f217de}{Tester}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename TK, typename TD$>$\\*
+class Binary\+Search\+Tree$<$ T\+K, T\+D $>$}
+
+A template binary search tree class. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Binary\+Search\+Tree@{Binary\+Search\+Tree}!Binary\+Search\+Tree@{Binary\+Search\+Tree}}
+\index{Binary\+Search\+Tree@{Binary\+Search\+Tree}!Binary\+Search\+Tree@{Binary\+Search\+Tree}}
+\subsubsection[{\texorpdfstring{Binary\+Search\+Tree()}{BinarySearchTree()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TK, typename TD$>$ {\bf Binary\+Search\+Tree}$<$ TK, TD $>$\+::{\bf Binary\+Search\+Tree} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classBinarySearchTree_a3de2ca8efd1455d1ced09d49828cb75f}{}\label{classBinarySearchTree_a3de2ca8efd1455d1ced09d49828cb75f}
+
+
+Initializes the node count to 0, and the root pointer to nullptr. 
+
+\index{Binary\+Search\+Tree@{Binary\+Search\+Tree}!````~Binary\+Search\+Tree@{$\sim$\+Binary\+Search\+Tree}}
+\index{````~Binary\+Search\+Tree@{$\sim$\+Binary\+Search\+Tree}!Binary\+Search\+Tree@{Binary\+Search\+Tree}}
+\subsubsection[{\texorpdfstring{$\sim$\+Binary\+Search\+Tree()}{~BinarySearchTree()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TK, typename TD$>$ {\bf Binary\+Search\+Tree}$<$ TK, TD $>$\+::$\sim${\bf Binary\+Search\+Tree} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classBinarySearchTree_a32908378e03fb3dc0c515b65c81c17c6}{}\label{classBinarySearchTree_a32908378e03fb3dc0c515b65c81c17c6}
+
+
+Destroys the root node. 
+
+
+
+\subsection{Member Function Documentation}
+\index{Binary\+Search\+Tree@{Binary\+Search\+Tree}!Contains@{Contains}}
+\index{Contains@{Contains}!Binary\+Search\+Tree@{Binary\+Search\+Tree}}
+\subsubsection[{\texorpdfstring{Contains(const T\+K \&key)}{Contains(const TK &key)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TK, typename TD$>$ bool {\bf Binary\+Search\+Tree}$<$ TK, TD $>$\+::Contains (
+\begin{DoxyParamCaption}
+\item[{const TK \&}]{key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classBinarySearchTree_a34d99fb23656d7c88ede34373991ce75}{}\label{classBinarySearchTree_a34d99fb23656d7c88ede34373991ce75}
+
+
+Searches the tree for the key provided and returns true if found, false if not. 
+
+\begin{DoxyReturn}{Returns}
+$<$bool$>$ whether or not the key is found in the tree. 
+\end{DoxyReturn}
+\index{Binary\+Search\+Tree@{Binary\+Search\+Tree}!Delete@{Delete}}
+\index{Delete@{Delete}!Binary\+Search\+Tree@{Binary\+Search\+Tree}}
+\subsubsection[{\texorpdfstring{Delete(const T\+K \&key)}{Delete(const TK &key)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TK, typename TD$>$ void {\bf Binary\+Search\+Tree}$<$ TK, TD $>$\+::Delete (
+\begin{DoxyParamCaption}
+\item[{const TK \&}]{key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classBinarySearchTree_a1b7b6c893bd995f99522866a3cee1f04}{}\label{classBinarySearchTree_a1b7b6c893bd995f99522866a3cee1f04}
+
+
+Deletes the \hyperlink{classNode}{Node} that contains the given data, if it exists in the tree. 
+
+Search the tree for a \hyperlink{classNode}{Node} that contains the data. This \hyperlink{classNode}{Node} will be removed.
+
+You must handle children of the node based on how many it has.
+
+See the Sherrod attachment for the detailed code, page 310 -\/ 312.
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & const TK\&, the data to be removed from the tree. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+$<$void$>$ 
+\end{DoxyReturn}
+\index{Binary\+Search\+Tree@{Binary\+Search\+Tree}!Find\+Node@{Find\+Node}}
+\index{Find\+Node@{Find\+Node}!Binary\+Search\+Tree@{Binary\+Search\+Tree}}
+\subsubsection[{\texorpdfstring{Find\+Node(const T\+K \&key)}{FindNode(const TK &key)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TK, typename TD$>$ {\bf Node}$<$TK, TD$>$$\ast$ {\bf Binary\+Search\+Tree}$<$ TK, TD $>$\+::Find\+Node (
+\begin{DoxyParamCaption}
+\item[{const TK \&}]{key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\hypertarget{classBinarySearchTree_a46d382c3d81f26edc48a683d98127b43}{}\label{classBinarySearchTree_a46d382c3d81f26edc48a683d98127b43}
+
+
+Returns the Node$\ast$ that contains the key, or nullptr if data is not in the tree. 
+
+Similar to the Contains function, you will have to traverse the tree to find the key. If you find the \hyperlink{classNode}{Node} that contains this data, you will return the Node$\ast$.
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & $<$const TK\&$>$, the key that we are searching for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+$<$Node$<$\+T$>$$\ast$$>$ the Node$\ast$ that contains the key. Otherwise, nullptr if data is not found. 
+\end{DoxyReturn}
+\index{Binary\+Search\+Tree@{Binary\+Search\+Tree}!Find\+Parent\+Of\+Node@{Find\+Parent\+Of\+Node}}
+\index{Find\+Parent\+Of\+Node@{Find\+Parent\+Of\+Node}!Binary\+Search\+Tree@{Binary\+Search\+Tree}}
+\subsubsection[{\texorpdfstring{Find\+Parent\+Of\+Node(const T\+K \&key)}{FindParentOfNode(const TK &key)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TK, typename TD$>$ {\bf Node}$<$TK, TD$>$$\ast$ {\bf Binary\+Search\+Tree}$<$ TK, TD $>$\+::Find\+Parent\+Of\+Node (
+\begin{DoxyParamCaption}
+\item[{const TK \&}]{key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\hypertarget{classBinarySearchTree_a906da8772ab4d89b68f725a813de5706}{}\label{classBinarySearchTree_a906da8772ab4d89b68f725a813de5706}
+
+
+Returns the P\+A\+R\+E\+NT Node$\ast$ of the Node$\ast$ that contains the key, or nullptr if data is not in the tree. 
+
+Similar to the Find\+Node function, you will instead return the P\+A\+R\+E\+NT N\+O\+DE of the node that contains the key, rather than the node itself.
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & $<$const TK\&$>$, the key we are searching for; but going to return the parent of this node. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+$<$Node$<$\+T\+K, T\+D$>$$\ast$$>$ the Node$\ast$ that contains the data. Otherwise, nullptr if key is not found. 
+\end{DoxyReturn}
+\index{Binary\+Search\+Tree@{Binary\+Search\+Tree}!Get\+Count@{Get\+Count}}
+\index{Get\+Count@{Get\+Count}!Binary\+Search\+Tree@{Binary\+Search\+Tree}}
+\subsubsection[{\texorpdfstring{Get\+Count()}{GetCount()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TK, typename TD$>$ int {\bf Binary\+Search\+Tree}$<$ TK, TD $>$\+::Get\+Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classBinarySearchTree_a549c69be4369b93719fabafb10eed383}{}\label{classBinarySearchTree_a549c69be4369b93719fabafb10eed383}
+
+
+Returns the amount of nodes in the tree. 
+
+\begin{DoxyReturn}{Returns}
+$<$int$>$ the amount of nodes in the tree 
+\end{DoxyReturn}
+\index{Binary\+Search\+Tree@{Binary\+Search\+Tree}!Get\+Data@{Get\+Data}}
+\index{Get\+Data@{Get\+Data}!Binary\+Search\+Tree@{Binary\+Search\+Tree}}
+\subsubsection[{\texorpdfstring{Get\+Data(const T\+K \&key)}{GetData(const TK &key)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TK, typename TD$>$ TD$\ast$ {\bf Binary\+Search\+Tree}$<$ TK, TD $>$\+::Get\+Data (
+\begin{DoxyParamCaption}
+\item[{const TK \&}]{key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classBinarySearchTree_ad07f224e9b68ef681ddec73f0cd6e56e}{}\label{classBinarySearchTree_ad07f224e9b68ef681ddec73f0cd6e56e}
+
+
+Returns the data based on a key passed in, or nullptr if not present. 
+
+Search the binary tree for the node that has the given key (can use the Find\+Node function), and returns the data associated with that node. If no node is found, return nullptr instead.
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & $<$TK\&$>$ the key of the node we\textquotesingle{}re searching for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+$<$T\+D$\ast$$>$ data of the node that has the key given 
+\end{DoxyReturn}
+\index{Binary\+Search\+Tree@{Binary\+Search\+Tree}!Get\+Height@{Get\+Height}}
+\index{Get\+Height@{Get\+Height}!Binary\+Search\+Tree@{Binary\+Search\+Tree}}
+\subsubsection[{\texorpdfstring{Get\+Height()}{GetHeight()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TK, typename TD$>$ int {\bf Binary\+Search\+Tree}$<$ TK, TD $>$\+::Get\+Height (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classBinarySearchTree_a024149bb1d2b82953d691c6312916c1a}{}\label{classBinarySearchTree_a024149bb1d2b82953d691c6312916c1a}
+
+
+Returns the height of the entire tree; must be max height. 
+
+\begin{DoxyReturn}{Returns}
+$<$int$>$ height of the tree 
+\end{DoxyReturn}
+\index{Binary\+Search\+Tree@{Binary\+Search\+Tree}!Get\+Height@{Get\+Height}}
+\index{Get\+Height@{Get\+Height}!Binary\+Search\+Tree@{Binary\+Search\+Tree}}
+\subsubsection[{\texorpdfstring{Get\+Height(\+Node$<$ T\+K, T\+D $>$ $\ast$ptr\+Current)}{GetHeight(Node< TK, TD > *ptrCurrent)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TK, typename TD$>$ int {\bf Binary\+Search\+Tree}$<$ TK, TD $>$\+::Get\+Height (
+\begin{DoxyParamCaption}
+\item[{{\bf Node}$<$ TK, TD $>$ $\ast$}]{ptr\+Current}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\hypertarget{classBinarySearchTree_a0e871429a131d331b831334d57888211}{}\label{classBinarySearchTree_a0e871429a131d331b831334d57888211}
+Get the height of left sub tree, say left\+Height Get the height of right sub tree, say right\+Height Take the Max(left\+Height, right\+Height) and add 1 for the root and return Call recur­sively. \index{Binary\+Search\+Tree@{Binary\+Search\+Tree}!Get\+In\+Order@{Get\+In\+Order}}
+\index{Get\+In\+Order@{Get\+In\+Order}!Binary\+Search\+Tree@{Binary\+Search\+Tree}}
+\subsubsection[{\texorpdfstring{Get\+In\+Order()}{GetInOrder()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TK, typename TD$>$ string {\bf Binary\+Search\+Tree}$<$ TK, TD $>$\+::Get\+In\+Order (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classBinarySearchTree_af91f7e6c512aa0ff6e3d75a1d8cc0746}{}\label{classBinarySearchTree_af91f7e6c512aa0ff6e3d75a1d8cc0746}
+
+
+Displays the keys of the nodes in the tree, in in-\/order format. 
+
+This function creates a stringstream and calls the recursive Get\+In\+Order function. It will return the keys of the nodes in the tree in string format.
+
+\begin{DoxyReturn}{Returns}
+$<$string$>$ The keys of the nodes in the tree, in in-\/order format, as a string. 
+\end{DoxyReturn}
+\index{Binary\+Search\+Tree@{Binary\+Search\+Tree}!Get\+In\+Order@{Get\+In\+Order}}
+\index{Get\+In\+Order@{Get\+In\+Order}!Binary\+Search\+Tree@{Binary\+Search\+Tree}}
+\subsubsection[{\texorpdfstring{Get\+In\+Order(\+Node$<$ T\+K, T\+D $>$ $\ast$ptr\+Current, stringstream \&stream)}{GetInOrder(Node< TK, TD > *ptrCurrent, stringstream &stream)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TK, typename TD$>$ void {\bf Binary\+Search\+Tree}$<$ TK, TD $>$\+::Get\+In\+Order (
+\begin{DoxyParamCaption}
+\item[{{\bf Node}$<$ TK, TD $>$ $\ast$}]{ptr\+Current, }
+\item[{stringstream \&}]{stream}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\hypertarget{classBinarySearchTree_ae32eaf601ac4c20a71c818f905e20e2e}{}\label{classBinarySearchTree_ae32eaf601ac4c20a71c818f905e20e2e}
+
+
+Recurses through the tree in I\+N-\/\+O\+R\+D\+ER order, writing to the stream. 
+
+In order will display the items in the tree in ascending order. From an algorithmic point of view, for whatever node it is on, it will\+:
+\begin{DoxyItemize}
+\item Display the left node item
+\item Display the current node item
+\item Display the right node item
+\end{DoxyItemize}
+
+To write out to the stream, simply use\+: stream $<$$<$ ptr\+Current-\/$>$key $<$$<$ \char`\"{} \char`\"{};
+
+Note that it is expected that you will have a leading space \char`\"{} \char`\"{} at the end of the generated string. \index{Binary\+Search\+Tree@{Binary\+Search\+Tree}!Get\+Max@{Get\+Max}}
+\index{Get\+Max@{Get\+Max}!Binary\+Search\+Tree@{Binary\+Search\+Tree}}
+\subsubsection[{\texorpdfstring{Get\+Max()}{GetMax()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TK, typename TD$>$ TK$\ast$ {\bf Binary\+Search\+Tree}$<$ TK, TD $>$\+::Get\+Max (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classBinarySearchTree_acadafc04cb0d80f8bb8127bec3617c18}{}\label{classBinarySearchTree_acadafc04cb0d80f8bb8127bec3617c18}
+
+
+Returns the largest value in the tree. 
+
+Keep in mind that, for any given node, anything to the R\+I\+G\+HT is greater than that node.
+
+\begin{DoxyReturn}{Returns}
+$<$T\+K$\ast$$>$ Largest key in the tree, or nullptr if tree is empty 
+\end{DoxyReturn}
+\index{Binary\+Search\+Tree@{Binary\+Search\+Tree}!Get\+Max@{Get\+Max}}
+\index{Get\+Max@{Get\+Max}!Binary\+Search\+Tree@{Binary\+Search\+Tree}}
+\subsubsection[{\texorpdfstring{Get\+Max(\+Node$<$ T\+K, T\+D $>$ $\ast$ptr\+Current)}{GetMax(Node< TK, TD > *ptrCurrent)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TK, typename TD$>$ TK$\ast$ {\bf Binary\+Search\+Tree}$<$ TK, TD $>$\+::Get\+Max (
+\begin{DoxyParamCaption}
+\item[{{\bf Node}$<$ TK, TD $>$ $\ast$}]{ptr\+Current}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\hypertarget{classBinarySearchTree_a2792ab45f6037873d8d73b2bcfa40d8f}{}\label{classBinarySearchTree_a2792ab45f6037873d8d73b2bcfa40d8f}
+
+
+Recurses through the tree, going to the right-\/child-\/nodes until the max key is found. 
+
+Items are inserted into a binary search tree in a sorted order. This means that larger items always get inserted to the right, with the maximum value being the right-\/most value. \index{Binary\+Search\+Tree@{Binary\+Search\+Tree}!Get\+Post\+Order@{Get\+Post\+Order}}
+\index{Get\+Post\+Order@{Get\+Post\+Order}!Binary\+Search\+Tree@{Binary\+Search\+Tree}}
+\subsubsection[{\texorpdfstring{Get\+Post\+Order()}{GetPostOrder()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TK, typename TD$>$ string {\bf Binary\+Search\+Tree}$<$ TK, TD $>$\+::Get\+Post\+Order (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classBinarySearchTree_a955641b38b09fad48dff386212b5e692}{}\label{classBinarySearchTree_a955641b38b09fad48dff386212b5e692}
+
+
+Displays the keys of the nodes in the tree, in post-\/order format. 
+
+This function creates a stringstream and calls the recursive Get\+Post\+Order function. It will return the keys of the nodes in the tree in string format.
+
+\begin{DoxyReturn}{Returns}
+$<$string$>$ The keys of the nodes in the tree, in post-\/order format, as a string. 
+\end{DoxyReturn}
+\index{Binary\+Search\+Tree@{Binary\+Search\+Tree}!Get\+Post\+Order@{Get\+Post\+Order}}
+\index{Get\+Post\+Order@{Get\+Post\+Order}!Binary\+Search\+Tree@{Binary\+Search\+Tree}}
+\subsubsection[{\texorpdfstring{Get\+Post\+Order(\+Node$<$ T\+K, T\+D $>$ $\ast$ptr\+Current, stringstream \&stream)}{GetPostOrder(Node< TK, TD > *ptrCurrent, stringstream &stream)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TK, typename TD$>$ void {\bf Binary\+Search\+Tree}$<$ TK, TD $>$\+::Get\+Post\+Order (
+\begin{DoxyParamCaption}
+\item[{{\bf Node}$<$ TK, TD $>$ $\ast$}]{ptr\+Current, }
+\item[{stringstream \&}]{stream}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\hypertarget{classBinarySearchTree_ab6c97fbe7406de99a7c6d90247eb47c3}{}\label{classBinarySearchTree_ab6c97fbe7406de99a7c6d90247eb47c3}
+
+
+Recurses through the tree in P\+O\+S\+T-\/\+O\+R\+D\+ER order, writing to the stream. 
+
+In order will display the items in the tree post-\/order. From an algorithmic point of view, for whatever node it is on, it will\+:
+\begin{DoxyItemize}
+\item Display the left node item
+\item Display the right node item
+\item Display the current node item
+\end{DoxyItemize}
+
+Note that it is expected that you will have a leading space \char`\"{} \char`\"{} at the end of the generated string. \index{Binary\+Search\+Tree@{Binary\+Search\+Tree}!Get\+Pre\+Order@{Get\+Pre\+Order}}
+\index{Get\+Pre\+Order@{Get\+Pre\+Order}!Binary\+Search\+Tree@{Binary\+Search\+Tree}}
+\subsubsection[{\texorpdfstring{Get\+Pre\+Order()}{GetPreOrder()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TK, typename TD$>$ string {\bf Binary\+Search\+Tree}$<$ TK, TD $>$\+::Get\+Pre\+Order (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classBinarySearchTree_a5bf79ef6e69aa6ac90a9aa69eda5fc2f}{}\label{classBinarySearchTree_a5bf79ef6e69aa6ac90a9aa69eda5fc2f}
+
+
+Displays the keys of the nodes in the tree, in pre-\/order format. 
+
+This function creates a stringstream and calls the recursive Get\+Pre\+Order function. It will return the keys of the nodes in the tree in string format.
+
+\begin{DoxyReturn}{Returns}
+$<$string$>$ The keys of the nodes in the tree, in pre-\/order format, as a string. 
+\end{DoxyReturn}
+\index{Binary\+Search\+Tree@{Binary\+Search\+Tree}!Get\+Pre\+Order@{Get\+Pre\+Order}}
+\index{Get\+Pre\+Order@{Get\+Pre\+Order}!Binary\+Search\+Tree@{Binary\+Search\+Tree}}
+\subsubsection[{\texorpdfstring{Get\+Pre\+Order(\+Node$<$ T\+K, T\+D $>$ $\ast$ptr\+Current, stringstream \&stream)}{GetPreOrder(Node< TK, TD > *ptrCurrent, stringstream &stream)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TK, typename TD$>$ void {\bf Binary\+Search\+Tree}$<$ TK, TD $>$\+::Get\+Pre\+Order (
+\begin{DoxyParamCaption}
+\item[{{\bf Node}$<$ TK, TD $>$ $\ast$}]{ptr\+Current, }
+\item[{stringstream \&}]{stream}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\hypertarget{classBinarySearchTree_ae67bb354708055152757d27d99d569bb}{}\label{classBinarySearchTree_ae67bb354708055152757d27d99d569bb}
+
+
+Recurses through the tree in P\+R\+E-\/\+O\+R\+D\+ER order, writing to the stream. 
+
+In order will display the items in the tree pre-\/order. From an algorithmic point of view, for whatever node it is on, it will\+:
+\begin{DoxyItemize}
+\item Display the current node item
+\item Display the left node item
+\item Display the right node item
+\end{DoxyItemize}
+
+Note that it is expected that you will have a leading space \char`\"{} \char`\"{} at the end of the generated string. \index{Binary\+Search\+Tree@{Binary\+Search\+Tree}!Insert@{Insert}}
+\index{Insert@{Insert}!Binary\+Search\+Tree@{Binary\+Search\+Tree}}
+\subsubsection[{\texorpdfstring{Insert(const T\+K \&new\+Key, const T\+D \&new\+Data)}{Insert(const TK &newKey, const TD &newData)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TK, typename TD$>$ void {\bf Binary\+Search\+Tree}$<$ TK, TD $>$\+::Insert (
+\begin{DoxyParamCaption}
+\item[{const TK \&}]{new\+Key, }
+\item[{const TD \&}]{new\+Data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classBinarySearchTree_ab1214eb6e3d8cfb63f60c6345dc64b31}{}\label{classBinarySearchTree_ab1214eb6e3d8cfb63f60c6345dc64b31}
+
+
+Creates a new node for the tree and assigns the data of that node to the parameter passed in. 
+
+If the tree is empty, the new data goes at the root node. Otherwise, we will have to recurse through the tree in order to find the correct position for our new data.
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Key} & const TK\&, the key to index this new item under \\
+\hline
+{\em new\+Data} & const TD\&, the new data to be added to the tree \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+$<$void$>$ 
+\end{DoxyReturn}
+\index{Binary\+Search\+Tree@{Binary\+Search\+Tree}!Recursive\+Insert@{Recursive\+Insert}}
+\index{Recursive\+Insert@{Recursive\+Insert}!Binary\+Search\+Tree@{Binary\+Search\+Tree}}
+\subsubsection[{\texorpdfstring{Recursive\+Insert(const T\+K \&new\+Key, const T\+D \&new\+Data, Node$<$ T\+K, T\+D $>$ $\ast$ptr\+Current)}{RecursiveInsert(const TK &newKey, const TD &newData, Node< TK, TD > *ptrCurrent)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TK, typename TD$>$ void {\bf Binary\+Search\+Tree}$<$ TK, TD $>$\+::Recursive\+Insert (
+\begin{DoxyParamCaption}
+\item[{const TK \&}]{new\+Key, }
+\item[{const TD \&}]{new\+Data, }
+\item[{{\bf Node}$<$ TK, TD $>$ $\ast$}]{ptr\+Current}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\hypertarget{classBinarySearchTree_abc7ae8df7f28600e52fc18283ac74d4e}{}\label{classBinarySearchTree_abc7ae8df7f28600e52fc18283ac74d4e}
+
+
+Recurses through the tree and finds the proper location for the new data. 
+
+T\+E\+R\+M\+I\+N\+A\+T\+I\+NG C\+A\+SE\+: If ptr\+Current is a nullptr, then we have traversed to a space that is available for our new node. Create our new node here and set up the data.
+
+R\+E\+C\+U\+R\+S\+I\+VE C\+A\+SE\+: If ptr\+Current is already taken, we must figure out whether to recurse L\+E\+FT or R\+I\+G\+HT, based on the value of new\+Data compared to the prt\+Current\textquotesingle{}s data.
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Key} & const TK\&, the key to index this new item under \\
+\hline
+{\em new\+Data} & const TD\&, the new data to be added to the tree \\
+\hline
+{\em ptr\+Current} & Node$<$\+T\+K, T\+D$>$$\ast$, the pointer to the current root of a subtree; will traverse left or right if new\+Key is less-\/than or greater-\/than, respectively. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+$<$void$>$ 
+\end{DoxyReturn}
+
+
+\subsection{Friends And Related Function Documentation}
+\index{Binary\+Search\+Tree@{Binary\+Search\+Tree}!Tester@{Tester}}
+\index{Tester@{Tester}!Binary\+Search\+Tree@{Binary\+Search\+Tree}}
+\subsubsection[{\texorpdfstring{Tester}{Tester}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TK, typename TD$>$ friend class {\bf Tester}\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classBinarySearchTree_a8da748c2b0afd5c6b23e931591f217de}{}\label{classBinarySearchTree_a8da748c2b0afd5c6b23e931591f217de}
+
+
+\subsection{Member Data Documentation}
+\index{Binary\+Search\+Tree@{Binary\+Search\+Tree}!m\+\_\+node\+Count@{m\+\_\+node\+Count}}
+\index{m\+\_\+node\+Count@{m\+\_\+node\+Count}!Binary\+Search\+Tree@{Binary\+Search\+Tree}}
+\subsubsection[{\texorpdfstring{m\+\_\+node\+Count}{m_nodeCount}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TK, typename TD$>$ int {\bf Binary\+Search\+Tree}$<$ TK, TD $>$\+::m\+\_\+node\+Count\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classBinarySearchTree_a619940c056dcb8aa8246ada1e7ca2e2c}{}\label{classBinarySearchTree_a619940c056dcb8aa8246ada1e7ca2e2c}
+
+
+The amount of nodes in the tree. 
+
+\index{Binary\+Search\+Tree@{Binary\+Search\+Tree}!m\+\_\+ptr\+Root@{m\+\_\+ptr\+Root}}
+\index{m\+\_\+ptr\+Root@{m\+\_\+ptr\+Root}!Binary\+Search\+Tree@{Binary\+Search\+Tree}}
+\subsubsection[{\texorpdfstring{m\+\_\+ptr\+Root}{m_ptrRoot}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TK, typename TD$>$ {\bf Node}$<$TK, TD$>$$\ast$ {\bf Binary\+Search\+Tree}$<$ TK, TD $>$\+::m\+\_\+ptr\+Root\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classBinarySearchTree_a721f28bd510e040b8573bdb1a19744ba}{}\label{classBinarySearchTree_a721f28bd510e040b8573bdb1a19744ba}
+
+
+A pointer to the root node of the tree; TK = data type of the key, TD = data type of the data. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{BinarySearchTree_8hpp}{Binary\+Search\+Tree.\+hpp}\end{DoxyCompactItemize}

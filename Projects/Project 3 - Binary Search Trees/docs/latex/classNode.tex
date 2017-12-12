@@ -1,0 +1,96 @@
+\hypertarget{classNode}{}\section{Node$<$ TK, TD $>$ Class Template Reference}
+\label{classNode}\index{Node$<$ T\+K, T\+D $>$@{Node$<$ T\+K, T\+D $>$}}
+
+
+A template node class, to be used in the \hyperlink{classBinarySearchTree}{Binary\+Search\+Tree} class.  
+
+
+
+
+{\ttfamily \#include $<$Binary\+Search\+Tree.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classNode_a78d65e1d59a007c5968389d36ff011a7}{Node} ()
+\begin{DoxyCompactList}\small\item\em Initializes left and right pointers to nullptr. \end{DoxyCompactList}\item 
+\hyperlink{classNode_a3730bdc7cc0efc1cce2f59f6d095315a}{$\sim$\+Node} ()
+\begin{DoxyCompactList}\small\item\em Destroys left and right children, if they are not pointing to nullptr. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classNode}{Node}$<$ TK, TD $>$ $\ast$ \hyperlink{classNode_a98e0618e17b682e76c861f747a40c960}{ptr\+Left}
+\begin{DoxyCompactList}\small\item\em Pointer to the left child of the node, which is lesser in value. \end{DoxyCompactList}\item 
+\hyperlink{classNode}{Node}$<$ TK, TD $>$ $\ast$ \hyperlink{classNode_a593bc4a915d083d34a92783f53c573e8}{ptr\+Right}
+\begin{DoxyCompactList}\small\item\em Pointer to the right chlid of the node, which is greater in value. \end{DoxyCompactList}\item 
+TD \hyperlink{classNode_ace127a609bfd32a340e6777d2c46aa23}{data}
+\begin{DoxyCompactList}\small\item\em The data stored by the node. \end{DoxyCompactList}\item 
+TK \hyperlink{classNode_ac1b1951db38766e3441c42cfa27e716e}{key}
+\begin{DoxyCompactList}\small\item\em The key of this node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename TK, typename TD$>$\\*
+class Node$<$ T\+K, T\+D $>$}
+
+A template node class, to be used in the \hyperlink{classBinarySearchTree}{Binary\+Search\+Tree} class. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Node@{Node}!Node@{Node}}
+\index{Node@{Node}!Node@{Node}}
+\subsubsection[{\texorpdfstring{Node()}{Node()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TK, typename TD$>$ {\bf Node}$<$ TK, TD $>$\+::{\bf Node} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classNode_a78d65e1d59a007c5968389d36ff011a7}{}\label{classNode_a78d65e1d59a007c5968389d36ff011a7}
+
+
+Initializes left and right pointers to nullptr. 
+
+\index{Node@{Node}!````~Node@{$\sim$\+Node}}
+\index{````~Node@{$\sim$\+Node}!Node@{Node}}
+\subsubsection[{\texorpdfstring{$\sim$\+Node()}{~Node()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TK, typename TD$>$ {\bf Node}$<$ TK, TD $>$\+::$\sim${\bf Node} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classNode_a3730bdc7cc0efc1cce2f59f6d095315a}{}\label{classNode_a3730bdc7cc0efc1cce2f59f6d095315a}
+
+
+Destroys left and right children, if they are not pointing to nullptr. 
+
+
+
+\subsection{Member Data Documentation}
+\index{Node@{Node}!data@{data}}
+\index{data@{data}!Node@{Node}}
+\subsubsection[{\texorpdfstring{data}{data}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TK, typename TD$>$ TD {\bf Node}$<$ TK, TD $>$\+::data}\hypertarget{classNode_ace127a609bfd32a340e6777d2c46aa23}{}\label{classNode_ace127a609bfd32a340e6777d2c46aa23}
+
+
+The data stored by the node. 
+
+\index{Node@{Node}!key@{key}}
+\index{key@{key}!Node@{Node}}
+\subsubsection[{\texorpdfstring{key}{key}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TK, typename TD$>$ TK {\bf Node}$<$ TK, TD $>$\+::key}\hypertarget{classNode_ac1b1951db38766e3441c42cfa27e716e}{}\label{classNode_ac1b1951db38766e3441c42cfa27e716e}
+
+
+The key of this node. 
+
+\index{Node@{Node}!ptr\+Left@{ptr\+Left}}
+\index{ptr\+Left@{ptr\+Left}!Node@{Node}}
+\subsubsection[{\texorpdfstring{ptr\+Left}{ptrLeft}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TK, typename TD$>$ {\bf Node}$<$TK, TD$>$$\ast$ {\bf Node}$<$ TK, TD $>$\+::ptr\+Left}\hypertarget{classNode_a98e0618e17b682e76c861f747a40c960}{}\label{classNode_a98e0618e17b682e76c861f747a40c960}
+
+
+Pointer to the left child of the node, which is lesser in value. 
+
+\index{Node@{Node}!ptr\+Right@{ptr\+Right}}
+\index{ptr\+Right@{ptr\+Right}!Node@{Node}}
+\subsubsection[{\texorpdfstring{ptr\+Right}{ptrRight}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename TK, typename TD$>$ {\bf Node}$<$TK, TD$>$$\ast$ {\bf Node}$<$ TK, TD $>$\+::ptr\+Right}\hypertarget{classNode_a593bc4a915d083d34a92783f53c573e8}{}\label{classNode_a593bc4a915d083d34a92783f53c573e8}
+
+
+Pointer to the right chlid of the node, which is greater in value. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{BinarySearchTree_8hpp}{Binary\+Search\+Tree.\+hpp}\end{DoxyCompactItemize}
